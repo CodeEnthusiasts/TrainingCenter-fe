@@ -1,6 +1,6 @@
 import { RouteProps } from 'react-router-dom';
 import Main from '../views/Main';
-import About from '../views/Trainings';
+import Trainings from '../views/Trainings';
 import NotFound from '../views/404';
 
 const routes: RouteProps[] = [
@@ -12,7 +12,7 @@ const routes: RouteProps[] = [
   {
     path: '/trainings',
     exact: true,
-    component: About,
+    component: Trainings,
   },
   {
     exact: false,
