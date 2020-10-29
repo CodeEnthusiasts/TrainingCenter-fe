@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    font-family: 'Francois One', sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: ${GlobalTheme.textColor};
     height: 100vh;
     background: #1C1C1C;

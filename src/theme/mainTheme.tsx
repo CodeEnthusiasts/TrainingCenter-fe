@@ -1,6 +1,7 @@
 import { ITheme } from '../__types__/ITheme'
 
 export const theme:ITheme = {
+  background: '#1C1C1C',
   primmary: '#11A8FD',
   color100: '#FFFFFF',
   color200: '#A7A7A7', 
