@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { theme } from './mainTheme';
 
 const GlobalTheme = {
   textColor: '#ffffff',
@@ -21,9 +22,17 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    color: ${GlobalTheme.textColor};
     height: 100vh;
-    background: #1C1C1C;
+    color: ${GlobalTheme.textColor};
+    background: ${theme.background100};
+    background: -moz-linear-gradient(0deg, ${theme.background100} 0%, ${theme.background200} 100%);
+    background: -webkit-linear-gradient(0deg, ${theme.background100} 0%, ${theme.background200} 100%);
+    background: linear-gradient(0deg,${theme.background100} 0%, ${theme.background200} 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(
+      startColorstr=${theme.background100},
+      endColorstr=${theme.background200},
+      GradientType=1
+      );
   }
 `;
  
