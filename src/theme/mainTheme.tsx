@@ -5,6 +5,7 @@ export const theme:ITheme = {
   background200: '#34393E',
   card100: '#1C1C1C',
   card200: '#2F353A',
+  accountTile100: '#3d3d3d',
   darkShadow: '#0F1113',
   lightShadow: '#727E8D',
   primmary: '#11A8FD',

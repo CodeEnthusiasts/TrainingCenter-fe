@@ -3,6 +3,7 @@ export interface ITheme {
   background200: string,
   card100: string,
   card200: string,
+  accountTile100: string,
   darkShadow: string,
   lightShadow: string,
   primmary: string,
