@@ -62,6 +62,7 @@ export default function Account() {
               detail={ detail }
               value={ value }
               iconClassName={ icons[i] }
+              key={ i }
             />
           )}
       </TilesWrapper>
