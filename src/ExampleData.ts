@@ -13,5 +13,14 @@ export const Data = {
     height: '188 cm',
     age: '23',
     gender: 'Man',
+  },
+  'UserDetailsEditAccount': {
+    profileImage: userImage,
+    name: 'Jan Kowalski',
+    weight: '90 kg',
+    height: '188 cm',
+    age: '23',
+    gender: 'Man',
+    email: 'sampleEmail@example.com',
   }
 }
