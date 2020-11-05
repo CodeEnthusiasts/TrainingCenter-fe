@@ -3,11 +3,16 @@ import styled from 'styled-components';
 import H1 from '../components/atoms/H1';
 import P from '../components/atoms/P';
 import ProfileImage from '../components/atoms/ProfileImage';
+import Navigation from '../components/organisms/Navigation/index'
 import { Data } from '../ExampleData';
 
 const HomeWrapper = styled.div`
+  padding: 30px 0;
   width: 350px;
-  margin: 30px auto;
+  margin: 0 auto;
+  height: 100vh;
+  max-height: 800px;
+  min-height: 600px;
   position: relative;
   & > div {
     margin-left: auto;
@@ -46,6 +51,7 @@ export default function Home() {
         <ProfileImage size="65px" src={ profileImage } alt="" />
       </div>
       <Rectangle />
+      <Navigation />
     </HomeWrapper>
   )
 }

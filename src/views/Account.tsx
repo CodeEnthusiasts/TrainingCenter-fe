@@ -4,6 +4,7 @@ import { Data } from '../ExampleData';
 import H1Proto from '../components/atoms/H1';
 import ProfileImage from '../components/atoms/ProfileImage';
 import styled from 'styled-components';
+import Navigation from '../components/organisms/Navigation';
 
 const icons = [ // assuming that data will be passed in this order
   'fas fa-weight-hanging',
@@ -27,7 +28,7 @@ const H1 = styled(H1Proto)`
 `; 
 
 const AccountWrapper = styled.div`
-  width: 375px;
+  width: 350px;
   position: relative;
   height: 100vh;
   max-height: 800px;
@@ -38,7 +39,7 @@ const AccountWrapper = styled.div`
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-  padding: 60px 0;
+  padding: 100px 0;
 `;
 
 const TilesWrapper = styled.div`
@@ -66,6 +67,7 @@ export default function Account() {
             />
           )}
       </TilesWrapper>
+      <Navigation />
     </AccountWrapper>
   )
 }

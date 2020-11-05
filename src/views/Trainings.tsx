@@ -2,12 +2,14 @@ import React from 'react';
 import TrainingCard from '../components/molecules/TrainingCard/TrainingCard'
 import styled from 'styled-components'
 import { Data } from '../ExampleData'
+import Navigation from '../components/organisms/Navigation';
 //Example Data until the backend is delivered
 
 const TrainingsWrapper = styled.ul`
   list-style-type: none;
   margin: 0;
   padding: 0;
+  padding-bottom: 100px;
   position: relative;
   margin-top: 100px;
   display: flex;
@@ -26,6 +28,7 @@ export default function Trainings() {
           />
         )
       })}    
+      <Navigation />
     </TrainingsWrapper>
     
 }
