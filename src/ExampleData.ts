@@ -22,5 +22,9 @@ export const Data = {
     age: '23',
     gender: 'Man',
     email: 'sampleEmail@example.com',
+  },
+  'UserDetailsHome': {
+    profileImage: userImage,
+    firstName: 'Jan', 
   }
 }
