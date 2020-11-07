@@ -1,5 +1,5 @@
 import { ITheme } from '../__types__/ITheme'
-
+//TODO: export fonts, colors, fontsSizes to saparate files
 export const theme:ITheme = {
   background100: '#17191C',
   background200: '#34393E',

@@ -1,12 +1,20 @@
+import { Button } from './../../molecules/UniversalAccountButton/styles';
 import styled, {css} from 'styled-components';
 
 const DefaultButtonRadius = 60;
 
-export const ButtonWrapper = styled.div<{radius?: number, }>`
+export const ButtonWrapper = styled.button<{radius?: number, }>`
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  
+  :active, a:focus {
+    outline: 0;
+    border: none;
+    -moz-outline-style: none;
+  }
 
   ${({theme, radius}) => css`
     width: ${radius ? radius : DefaultButtonRadius}px;

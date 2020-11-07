@@ -21,7 +21,7 @@ const TrainingCard:FC<ITrainingCardProps> = ({name, duration}) => {
         </CardDetails>
         <CardOptions>
             <H2>Start workout</H2>
-            <Button radius={40}>
+            <Button radius={40} onClick={ () => console.log("Moving to training details!")}>
               <Icon className="fas fa-play" color={theme.card200} size={1.5} />
             </Button>
         </CardOptions>

@@ -29,55 +29,89 @@ const routes: RouteProps[] = [
     path: RoutePaths.HOME,
     exact: true,
     component: Home,
+    data: {
+      'title': 'Home'
+    }
   },
   {
     path: RoutePaths.TRAININGS,
     exact: true,
     component: Trainings,
+    data: {
+      'title': 'Trainings'
+    }
   },
   {
     path: RoutePaths.TRAINING,
     exact: true,
     component: Training,
+    data: {
+      'title': 'Training'
+    }
   },
   {
     path: RoutePaths.ACCOUNT,
     exact: true,
     component: Account,
+    data: {
+      'title': 'Account'
+    }
   },
   {
     path: RoutePaths.EDIT_ACCOUNT,
     exact: true,
     component: EditAccount,
+    data: {
+      'title': 'Account'
+    }
   },
   {
     path: RoutePaths.PROFILE,
     exact: true,
     component: Profile,    
+    data: {
+      'title': 'Profile',
+    }
   },
   {
     path: RoutePaths.REGISTRATION,
     exact: true,
     component: Registeration,
+    data: {
+      'title': 'Registration'
+    }
   },
   {
     path: RoutePaths.ACHIEVEMENTS,
     exact: true,
     component: Achievements,
+    data: {
+      'title': 'Achievements'
+    }
   },
   {
     path: RoutePaths.SETTINGS,
     exact: true,
     component: Settings,
+    data: {
+      'title': 'Settings'
+    }
   },
   {
     path: RoutePaths.STATISTICS,
     exact: true,
     component: Statistics,
+    data: {
+      'title': 'Statistics'
+    }
   },
   {
+    path: '',
     exact: false,
     component: NotFound,
+    data: {
+      title: 'Page not found :('
+    }
   },
 ];
 
