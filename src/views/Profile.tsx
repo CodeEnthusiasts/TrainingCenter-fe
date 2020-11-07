@@ -1,13 +1,18 @@
-import React, {FC, useEffect} from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import ProfileLink from '../components/molecules/ProfileLink';
+import Navigation from '../components/organisms/Navigation';
 import { RoutePaths } from '../routes';
 import HeaderNavigation from '../components/molecules/HeaderNavigation'
 import RouteProps from '../routes/index'
 
 const ProfileWrapper = styled.div`
+  margin: 0 auto;
   width: 350px;
-  margin: 80px auto;
+  padding: 100px 0;
+  height: 100vh;
+  max-height: 800px;
+  min-height: 600px;
 `;
 
 const getRouteData = (path:string) => {
@@ -38,7 +43,7 @@ export default function Profile() {
           content="log out"    
         />
       </ProfileWrapper>
+      <Navigation />
     </>
-
   )
 }
