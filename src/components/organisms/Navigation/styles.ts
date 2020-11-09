@@ -8,6 +8,6 @@ export const Nav = styled.nav`
   align-items: center;
   position: absolute;
   left: 50%;
-  margin-left: -175px;
   bottom: 0;
+  transform: translate(-50%);
 `;
