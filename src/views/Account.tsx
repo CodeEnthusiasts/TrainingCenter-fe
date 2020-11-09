@@ -4,7 +4,8 @@ import { Data } from '../ExampleData';
 import H1Proto from '../components/atoms/H1';
 import ProfileImage from '../components/atoms/ProfileImage';
 import styled from 'styled-components';
-import Navigation from '../components/organisms/Navigation';
+import { RoutePaths } from '../routes';
+import MainTemplate from '../components/templates/MainTemplate';
 
 const icons = [ // assuming that data will be passed in this order
   'fas fa-weight-hanging',
@@ -54,20 +55,27 @@ export default function Account() {
   const { name, profileImage, ...details } = Data.UserDetailsAccount;
 
   return (
-    <AccountWrapper>
-      <ProfileImage src={ profileImage } alt="" size="150px" />
-      <H1>{ name }</H1>
-      <TilesWrapper>
-        { Object.entries(details).map(([detail, value], i) => 
-            <AccountTile 
-              detail={ detail }
-              value={ value }
-              iconClassName={ icons[i] }
-              key={ i }
-            />
-          )}
-      </TilesWrapper>
-      <Navigation />
+      <AccountWrapper>
+            <MainTemplate
+              routePath={ RoutePaths.ACCOUNT }
+              buttons={{ 
+                leftBtn: 'Back',
+                rightBtn: 'Edit',
+              }}
+            >
+        <ProfileImage src={ profileImage } alt="" size="150px" />
+        <H1>{ name }</H1>
+        <TilesWrapper>
+          { Object.entries(details).map(([detail, value], i) => 
+              <AccountTile 
+                detail={ detail }
+                value={ value }
+                iconClassName={ icons[i] }
+                key={ i }
+              />
+            )}
+        </TilesWrapper>
+      </MainTemplate>
     </AccountWrapper>
   )
 }
