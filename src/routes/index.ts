@@ -1,4 +1,4 @@
-import { RouteProps } from 'react-router-dom';
+import IRoute from '../__types__/IRoute';
 import Home from '../views/Home';
 import Trainings from '../views/Trainings';
 import Training from '../views/Training';
@@ -24,7 +24,8 @@ export enum RoutePaths {
   STATISTICS = '/statistics',
 }
 
-const routes: RouteProps[] = [
+
+const routes: IRoute[] = [
   {
     path: RoutePaths.HOME,
     exact: true,
