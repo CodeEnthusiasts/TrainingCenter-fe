@@ -2,33 +2,40 @@ import React from 'react';
 import TrainingCard from '../components/molecules/TrainingCard/TrainingCard'
 import styled from 'styled-components'
 import { Data } from '../ExampleData'
-import Navigation from '../components/organisms/Navigation';
+import MainTemplate from '../components/templates/MainTemplate';
+import { RoutePaths } from '../routes';
 //Example Data until the backend is delivered
 
 const TrainingsWrapper = styled.ul`
   list-style-type: none;
   margin: 0;
   padding: 0;
-  padding-bottom: 100px;
   position: relative;
-  margin-top: 100px;
   display: flex;
   flex-direction: column;
   gap: 30px;
   align-items: center;
 `
 export default function Trainings() {
-  return <TrainingsWrapper>
-       {Data.UserTrainings.map(item => {
-        return (
-          <TrainingCard
-            key={item.id}
-            name={item.name}
-            duration={item.duration}
-          />
-        )
-      })}    
-      <Navigation />
-    </TrainingsWrapper>
-    
+  return (
+    <MainTemplate
+      routePath={ RoutePaths.TRAININGS }
+      buttons={{
+        leftBtn: 'Back',
+        rightBtn: 'Add',
+      }}
+    >
+      <TrainingsWrapper>
+        {Data.UserTrainings.map(item => {
+          return (
+            <TrainingCard
+              key={item.id}
+              name={item.name}
+              duration={item.duration}
+            />
+          )
+        })}    
+      </TrainingsWrapper>
+    </MainTemplate>
+  )    
 }

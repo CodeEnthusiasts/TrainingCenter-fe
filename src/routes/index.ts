@@ -24,7 +24,6 @@ export enum RoutePaths {
   STATISTICS = '/statistics',
 }
 
-
 const routes: IRoute[] = [
   {
     path: RoutePaths.HOME,

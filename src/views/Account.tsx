@@ -29,18 +29,14 @@ const H1 = styled(H1Proto)`
 `; 
 
 const AccountWrapper = styled.div`
-  width: 350px;
+  width: 100%;
   position: relative;
-  height: 100vh;
-  max-height: 800px;
-  min-height: 600px;
-  margin: 0 auto;
+  height: 550px;
   text-align: center;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-  padding: 100px 0;
 `;
 
 const TilesWrapper = styled.div`
@@ -55,14 +51,14 @@ export default function Account() {
   const { name, profileImage, ...details } = Data.UserDetailsAccount;
 
   return (
+    <MainTemplate
+      routePath={ RoutePaths.ACCOUNT }
+      buttons={{ 
+        leftBtn: 'Back',
+        rightBtn: 'Edit',
+      }}
+    >
       <AccountWrapper>
-            <MainTemplate
-              routePath={ RoutePaths.ACCOUNT }
-              buttons={{ 
-                leftBtn: 'Back',
-                rightBtn: 'Edit',
-              }}
-            >
         <ProfileImage src={ profileImage } alt="" size="150px" />
         <H1>{ name }</H1>
         <TilesWrapper>
@@ -75,7 +71,7 @@ export default function Account() {
               />
             )}
         </TilesWrapper>
-      </MainTemplate>
     </AccountWrapper>
+    </MainTemplate>
   )
 }
