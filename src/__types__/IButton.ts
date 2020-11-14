@@ -1,5 +1,5 @@
 export interface IButton {
   children: React.ReactNode
   radius?: number;
-  onClick: React.MouseEventHandler<HTMLButtonElement>;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }

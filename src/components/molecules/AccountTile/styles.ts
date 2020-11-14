@@ -1,3 +1,5 @@
+import { colors } from './../../../theme/ThemeValues';
+import { Button } from './../UniversalAccountButton/styles';
 import styled, { css } from 'styled-components';
 
 const TileSize = {
@@ -16,15 +18,15 @@ export const Tile = styled.div`
   position: relative;
   margin-top: 15px;
   ${({ theme }) => css`
-    background: ${theme.accountTile100};
-    box-shadow: 0 3px 15px ${theme.darkShadow};
+    background: ${theme.colors.background.gradient.color1};
+    box-shadow: 0 3px 15px ${theme.colors.button.shadow.dark.color};
     & > p {
       :first-of-type {
         text-transform: capitalize;
         margin-top: 7px;
       }
       :last-of-type {
-        color: ${theme.color100};
+        color: ${theme.colors.secondary.color1};
       }
     }
   `};
@@ -32,7 +34,7 @@ export const Tile = styled.div`
 
 export const Hr = styled.hr`
   width: 70%;
-  background: ${({ theme }) => theme.color400};
+  background: ${({ theme }) => theme.colors.secondary.color3};
   height: 1px;
   margin: 5px 0;
 `;

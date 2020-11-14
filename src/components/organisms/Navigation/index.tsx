@@ -20,17 +20,17 @@ export default function Navigation() {
         <Icon 
           className="fas fa-home" 
           size={ 2.5 } 
-          color={ theme.color200 } />
+          color={theme.colors.secondary.color2 } />
       </NavButton>
 
       <NavButton path={ RoutePaths.HOME } location={ pathname }>
-        <Icon className="fas fa-search" size={ 2.5 } color={ theme.color200 } />
+        <Icon className="fas fa-search" size={ 2.5 } color={ theme.colors.secondary.color2 } />
       </NavButton>
       <NavButton path={ RoutePaths.TRAININGS } location={ pathname } isSpecial={ true }>
-        <Icon className="fas fa-dumbbell" size={ 2.5 } color={ theme.primmary } />
+        <Icon className="fas fa-dumbbell" size={ 2.5 } color={ theme.colors.primmary.color1 } />
       </NavButton>
       <NavButton path={ RoutePaths.HOME } location={ pathname }>
-        <Icon className="fas fa-plus" size={ 2.5 } color={ theme.color200 } />
+        <Icon className="fas fa-plus" size={ 2.5 } color={ theme.colors.secondary.color2 } />
       </NavButton>
       <NavButton path={ RoutePaths.ACCOUNT } location={ pathname }>
         <ProfileImage src={ ProfileImageSrc } size="30px" alt="" />

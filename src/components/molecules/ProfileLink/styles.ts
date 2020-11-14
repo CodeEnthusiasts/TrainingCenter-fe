@@ -11,6 +11,6 @@ export const Link = styled(LinkProto)`
 `;
 
 export const Span = styled.span`
-  color: ${({ theme }) => theme.color100};
+  color: ${({ theme }) => theme.colors.secondary.color1};
   margin-left: 15px;
 `;

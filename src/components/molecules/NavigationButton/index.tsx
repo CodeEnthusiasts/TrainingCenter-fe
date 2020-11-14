@@ -6,7 +6,7 @@ const NavigationButton: FC<INavigationButton> = ({ path, children, location, isS
 
 
   return (
-    <Link to={ path } active={ path == location } isSpecial={ isSpecial }>
+    <Link to={ path } active={ path === location } isSpecial={ isSpecial }>
     { children }
     </Link>
   )

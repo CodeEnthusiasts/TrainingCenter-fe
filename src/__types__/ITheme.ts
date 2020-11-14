@@ -1,18 +1,7 @@
+import { IColors } from '../__types__/IColors'
+
 export interface ITheme {
-  background100: string,
-  background200: string,
-  card100: string,
-  card200: string,
-  accountTile100: string,
-  darkShadow: string,
-  lightShadow: string,
-  primmary: string,
-  primmary100: string,
-  primmary200: string,
-  color100: string,
-  color200: string,
-  color300: string,
-  color400: string,
+  colors: IColors,
   fontSize: {
     xs: string, 
     s: string,

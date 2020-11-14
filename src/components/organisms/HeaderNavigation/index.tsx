@@ -6,7 +6,7 @@ import { useHistory } from "react-router-dom";
 import Button from '../../atoms/Button'
 import H1 from '../../atoms/H1'
 import Icon from '../../atoms/Icon'
-
+  
 const HeaderNavigation:FC<IHeaderNavigation> = ({title, buttons}) => {
   let history = useHistory();
 
@@ -53,7 +53,7 @@ const HeaderNavigation:FC<IHeaderNavigation> = ({title, buttons}) => {
           return(
             (buttons.leftBtn === e.name) &&
             <Button radius={45} onClick={e.action} key={e.id}>
-              <Icon className={e.icon} color={theme.color100}/>
+              <Icon className={e.icon} color={theme.colors.secondary.color1}/>
             </Button>
           )
         })}
@@ -65,7 +65,7 @@ const HeaderNavigation:FC<IHeaderNavigation> = ({title, buttons}) => {
             (buttons.rightBtn === e.name) && e.linkTo && e.action &&
               <HeaderLink to={e.linkTo} key={e.id}>
                 <Button radius={45} onClick={e.action}>
-                  <Icon className={e.icon} color={theme.color100}/>
+                  <Icon className={e.icon} color={theme.colors.secondary.color1}/>
                 </Button>
               </HeaderLink>
           )

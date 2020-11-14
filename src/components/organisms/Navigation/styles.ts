@@ -6,8 +6,9 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  position: absolute;
+  position: fixed;
   left: 50%;
   bottom: 0;
   transform: translate(-50%);
+  z-index: 999;
 `;

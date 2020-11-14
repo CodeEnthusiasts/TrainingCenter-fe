@@ -22,7 +22,7 @@ export default function EditAccount() {
   return (
     <EditAccountWrapper>
       <ChangePhotoButton />
-      <H2 style={{ color: theme.color200 }}>
+      <H2 style={{ color: theme.colors.secondary.color2 }}>
         Change photo
       </H2>
       { Object.entries(details).map(([detail, value], i) =>

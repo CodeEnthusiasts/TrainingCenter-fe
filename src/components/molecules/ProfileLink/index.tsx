@@ -12,7 +12,7 @@ const ProfileLink: FC<IProfileLink> = ({ content, iconClassName, path }) =>
     <Link to={ path }>
       <Button>
         <P>
-          <Icon size={ 1.2 } className={ iconClassName } color={ theme.color200 } />
+          <Icon size={ 1.2 } className={ iconClassName } color={ theme.colors.secondary.color2 } />
           <Span>{ content ? content : path.replace(/-/g, ' ').slice(1) }</Span>
         </P>
       </Button>

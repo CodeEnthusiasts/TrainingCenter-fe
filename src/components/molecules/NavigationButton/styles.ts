@@ -1,3 +1,4 @@
+import { colors } from './../../../theme/ThemeValues';
 import styled, { css } from 'styled-components';
 import { Link as LinkProto } from 'react-router-dom';
 
@@ -11,7 +12,7 @@ export const Link = styled(LinkProto)<{ active: boolean, isSpecial: true | undef
   align-items: center;
   border: none;
   ${({ isSpecial, theme }) => isSpecial && css`
-    border: 3px solid ${theme.primmary};
+    border: 3px solid ${theme.colors.primmary.color1};
     border-radius: 50%;
   `};
   ::after {
@@ -20,7 +21,7 @@ export const Link = styled(LinkProto)<{ active: boolean, isSpecial: true | undef
     display: ${({ active }) => active ? 'block' : 'none'};
     width: 10px;
     height: 10px;
-    background: ${({ theme }) => theme.primmary};
+    background: ${({ theme }) => theme.colors.primmary.color1};
     border-radius: 50%;
     left: 20px;
     top: 55px;

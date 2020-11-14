@@ -21,8 +21,7 @@ export default function Profile() {
           buttons={{
             leftBtn: 'Back',
             rightBtn: 'Menu',
-          }}
-        >
+          }}>
           <ProfileLink path={ RoutePaths.EDIT_ACCOUNT } iconClassName="fas fa-user" />
           <ProfileLink path={ RoutePaths.STATISTICS } iconClassName="fas fa-chart-bar" />
           <ProfileLink path={ RoutePaths.TRAININGS } iconClassName="fas fa-chart-line" />

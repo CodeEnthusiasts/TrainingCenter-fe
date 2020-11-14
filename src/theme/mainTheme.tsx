@@ -1,20 +1,8 @@
 import { ITheme } from '../__types__/ITheme'
-//TODO: export fonts, colors, fontsSizes to saparate files
+import { colors } from '../theme/ThemeValues'
+
 export const theme:ITheme = {
-  background100: '#17191C',
-  background200: '#34393E',
-  card100: '#1C1C1C',
-  card200: '#2F353A',
-  accountTile100: '#3d3d3d',
-  darkShadow: '#0F1113',
-  lightShadow: '#727E8D',
-  primmary: '#11A8FD',
-  primmary100: '#4ABEFF',
-  primmary200: '#005EA3',
-  color100: '#FFFFFF',
-  color200: '#A7A7A7', 
-  color300: '#999999',
-  color400: '#707070',
+  colors,
   fontSize: {
       xs: '0.8em',
       s: '1em',
@@ -22,5 +10,6 @@ export const theme:ITheme = {
       l: '2em',
       xl: '2.5em',
   },
+  
 };
 

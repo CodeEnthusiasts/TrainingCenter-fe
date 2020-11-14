@@ -7,7 +7,7 @@ const UniversalAccountButton: FC<{ children: ReactNode }> = ({ children }) =>
 
   <Button>
     { children }
-    <Icon size={ 1 } className="fas fa-chevron-right" color={ theme.color200 } />
+    <Icon size={ 1 } className="fas fa-chevron-right" color={ theme.colors.secondary.color2 } />
   </Button>
 
 export default UniversalAccountButton;

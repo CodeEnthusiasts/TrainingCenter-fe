@@ -16,8 +16,8 @@ export const Button = styled.button`
   background: none;
   border: none;
   ${({ theme }) => css`
-    color: ${theme.color100};
+    color: ${theme.colors.secondary.color1};
     font-size: ${theme.fontSize.s};
-    border-bottom: 1px solid ${theme.color200};
+    border-bottom: 1px solid ${theme.colors.secondary.color2};
   `}
 `;

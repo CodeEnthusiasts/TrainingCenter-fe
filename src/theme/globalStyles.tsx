@@ -16,6 +16,7 @@ const GlobalStyle = createGlobalStyle`
 
   html {
     font-size: ${GlobalTheme.fontSize};  
+    overflow: hidden;
   }
 
   body {
@@ -24,13 +25,19 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Poppins', sans-serif;
     height: 100vh;
     color: ${GlobalTheme.textColor};
-    background: ${theme.background100};
-    background: -moz-linear-gradient(0deg, ${theme.background100} 0%, ${theme.background200} 100%);
-    background: -webkit-linear-gradient(0deg, ${theme.background100} 0%, ${theme.background200} 100%);
-    background: linear-gradient(0deg,${theme.background100} 0%, ${theme.background200} 100%);
+    background: ${theme.colors.background.gradient.color1};
+    background: -moz-linear-gradient(0deg, 
+              ${theme.colors.background.gradient.color1} 0%, 
+              ${theme.colors.background.gradient.color2} 100%);
+    background: -webkit-linear-gradient(0deg, 
+              ${theme.colors.background.gradient.color1} 0%, 
+              ${theme.colors.background.gradient.color2} 100%);
+    background: linear-gradient(0deg,
+              ${theme.colors.background.gradient.color1} 0%, 
+              ${theme.colors.background.gradient.color2} 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(
-      startColorstr=${theme.background100},
-      endColorstr=${theme.background200},
+      startColorstr=${theme.colors.background.gradient.color1},
+      endColorstr=${theme.colors.background.gradient.color2},
       GradientType=1
       );
   }

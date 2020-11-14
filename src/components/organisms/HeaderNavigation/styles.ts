@@ -12,6 +12,7 @@ export const HeaderWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   text-align: center;
+  z-index: 999;
 `
 export const HeaderLink = styled(Link)`
   text-decoration: none;
