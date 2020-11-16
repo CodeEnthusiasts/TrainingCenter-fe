@@ -5,14 +5,16 @@ import ChangePhotoButton from '../components/molecules/ChangePhotoButton';
 import { Data } from '../ExampleData';
 import { theme } from '../theme/mainTheme';
 import styled from 'styled-components';
+import { RoutePaths } from '../routes';
 
 const EditAccountWrapper = styled.div`
   width: 375px;
-  margin: 80px auto;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   flex-direction: column;
   text-align: center;
+  padding-top: 80px;
 `;
 
 export default function EditAccount() {

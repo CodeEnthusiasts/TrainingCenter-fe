@@ -8,7 +8,8 @@ import { RoutePaths } from '../routes/index'
 const TrainingsWrapper = styled.ul`
   list-style-type: none;
   margin: 0;
-  padding: 10px 0;
+  padding: 0;
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 30px;

@@ -6,7 +6,14 @@ import { useHistory } from "react-router-dom";
 import Button from '../../atoms/Button'
 import H1 from '../../atoms/H1'
 import Icon from '../../atoms/Icon'
-  
+import Routes from '../../../routes/'
+const getRouteData = (path:string) => {
+  const Data = Routes.filter((element) => {
+    return element.path === path
+  })
+  return Data[0];
+}
+
 const HeaderNavigation:FC<IHeaderNavigation> = ({title, buttons}) => {
   let history = useHistory();
 
@@ -58,12 +65,12 @@ const HeaderNavigation:FC<IHeaderNavigation> = ({title, buttons}) => {
           )
         })}
 
-        <H1>{title.toUpperCase()}</H1>
+        <H1>{getRouteData(title).data.title}</H1>
         
         {HeaderButtons.map((e) => {
           return (
             (buttons.rightBtn === e.name) && e.linkTo && e.action &&
-              <HeaderLink to={e.linkTo} key={e.id}>
+              <HeaderLink to={e.linkTo} key={e.id}> 
                 <Button radius={45} onClick={e.action}>
                   <Icon className={e.icon} color={theme.colors.secondary.color1}/>
                 </Button>

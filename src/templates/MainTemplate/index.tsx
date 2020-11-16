@@ -2,7 +2,6 @@ import React, { FC } from 'react';
 import Navigation from '../../components/organisms/Navigation';
 import HeaderNavigation from '../../components/organisms/HeaderNavigation';
 import IMainTemplate from '../../__types__/IMainTemplate';
-import Routes from '../../routes';
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -10,19 +9,12 @@ const Container = styled.div`
   margin-top: 80px;
   overflow: hidden;
 `
-const getRouteData = (path:string) => {
-  const Data = Routes.filter((element) => {
-    return element.path === path
-  })
-  return Data[0];
-}
-
 const MainTemplate: FC<IMainTemplate> = ({ buttons, children, routePath }) => {
   return (
     <>
       <HeaderNavigation 
         buttons={ buttons } 
-        title={ getRouteData(routePath).data.title } 
+        title={ routePath } 
       />
       <Container>
       { children }
