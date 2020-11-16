@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
-import Navigation from '../../organisms/Navigation';
-import HeaderNavigation from '../../organisms/HeaderNavigation';
-import IMainTemplate from '../../../__types__/IMainTemplate';
-import Routes from '../../../routes';
+import Navigation from '../../components/organisms/Navigation';
+import HeaderNavigation from '../../components/organisms/HeaderNavigation';
+import IMainTemplate from '../../__types__/IMainTemplate';
+import Routes from '../../routes';
 import styled from 'styled-components'
 
 const Container = styled.div`
