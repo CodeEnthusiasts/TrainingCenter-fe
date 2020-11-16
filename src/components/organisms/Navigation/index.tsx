@@ -23,14 +23,14 @@ export default function Navigation() {
           color={theme.colors.secondary.color2 } />
       </NavButton>
 
-      <NavButton path={ RoutePaths.HOME } location={ pathname }>
+      <NavButton path={ RoutePaths.ATLAS } location={ pathname }>
         <Icon className="fas fa-search" size={ 2.5 } color={ theme.colors.secondary.color2 } />
       </NavButton>
       <NavButton path={ RoutePaths.TRAININGS } location={ pathname } isSpecial={ true }>
         <Icon className="fas fa-dumbbell" size={ 2.5 } color={ theme.colors.primmary.color1 } />
       </NavButton>
-      <NavButton path={ RoutePaths.HOME } location={ pathname }>
-        <Icon className="fas fa-plus" size={ 2.5 } color={ theme.colors.secondary.color2 } />
+      <NavButton path={ RoutePaths.TRAINING_HISTORY } location={ pathname }>
+        <Icon className="fas fa-book" size={ 2.5 } color={ theme.colors.secondary.color2 } />
       </NavButton>
       <NavButton path={ RoutePaths.ACCOUNT } location={ pathname }>
         <ProfileImage src={ ProfileImageSrc } size="30px" alt="" />

@@ -19,14 +19,11 @@ export const Tile = styled.div`
   margin-top: 15px;
   ${({ theme }) => css`
     background: ${theme.colors.background.gradient.color1};
-    box-shadow: 0 3px 15px ${theme.colors.button.shadow.dark.color};
+    box-shadow: 0 3px 15px ${theme.colors.button.shadow.dark};
     & > p {
       :first-of-type {
         text-transform: capitalize;
         margin-top: 7px;
-      }
-      :last-of-type {
-        color: ${theme.colors.secondary.color1};
       }
     }
   `};
