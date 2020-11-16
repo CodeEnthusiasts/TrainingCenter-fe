@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import ProfileLink from '../components/molecules/ProfileLink';
 import { RoutePaths } from '../routes';
-import MainTemplate from '../components/templates/MainTemplate';
+import MainTemplate from '../templates/MainTemplate';
 
 const ProfileWrapper = styled.div`
   margin: 0 auto;

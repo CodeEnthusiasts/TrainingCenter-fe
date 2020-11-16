@@ -1,7 +1,5 @@
 import IRoute from '../__types__/IRoute';
 import Home from '../views/Home';
-import Trainings from '../views/Trainings';
-import Training from '../views/Training';
 import Account from '../views/Account';
 import EditAccount from '../views/EditAccount';
 import Profile from '../views/Profile';
@@ -10,11 +8,18 @@ import Achievements from '../views/Achievements';
 import Settings from '../views/Settings';
 import Statistics from '../views/Statistics';
 import NotFound from '../views/404';
+import Trainings from '../views/Trainings';
+import TrainingExercises from '../views/TrainingExercises'
+import TrainingBrakes from '../views/TrainingBrakes';
+import TrainingRest from '../views/TrainingRest'
 
 export enum RoutePaths {
   HOME = '/',
   TRAININGS = '/trainings',
   TRAINING = '/trainings/:trainingId',
+  TRAINING_EXERCISES = '/trainings/:trainingId/exercises',
+  TRAINING_BRAKES = '/trainings/:trainingId/brakes',
+  TRAINING_REST = '/trainings/:trainingId/rest',
   ACCOUNT = '/account',
   EDIT_ACCOUNT = '/edit-account',
   PROFILE = '/profile',
@@ -24,16 +29,7 @@ export enum RoutePaths {
   STATISTICS = '/statistics',
 }
 
-
 const routes: IRoute[] = [
-  {
-    path: RoutePaths.HOME,
-    exact: true,
-    component: Home,
-    data: {
-      'title': 'Home'
-    }
-  },
   {
     path: RoutePaths.TRAININGS,
     exact: true,
@@ -43,11 +39,35 @@ const routes: IRoute[] = [
     }
   },
   {
-    path: RoutePaths.TRAINING,
+    path: RoutePaths.TRAINING_EXERCISES,
     exact: true,
-    component: Training,
+    component: TrainingExercises,
     data: {
       'title': 'Training'
+    }
+  },
+  {
+    path: RoutePaths.TRAINING_BRAKES,
+    exact: true,
+    component: TrainingBrakes,
+    data: {
+      'title': 'Training'
+    }
+  },
+  {
+    path: RoutePaths.TRAINING_REST,
+    exact: true,
+    component: TrainingRest,
+    data: {
+      'title': 'Training'
+    }
+  },
+  {
+    path: RoutePaths.HOME,
+    exact: true,
+    component: Home,
+    data: {
+      'title': 'Home'
     }
   },
   {
@@ -114,6 +134,7 @@ const routes: IRoute[] = [
       title: 'Page not found :('
     }
   },
+  
 ];
 
 export default routes;

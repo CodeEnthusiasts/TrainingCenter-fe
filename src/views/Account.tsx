@@ -5,7 +5,7 @@ import H1Proto from '../components/atoms/H1';
 import ProfileImage from '../components/atoms/ProfileImage';
 import styled from 'styled-components';
 import { RoutePaths } from '../routes';
-import MainTemplate from '../components/templates/MainTemplate';
+import MainTemplate from '../templates/MainTemplate';
 
 const icons = [ // assuming that data will be passed in this order
   'fas fa-weight-hanging',
