@@ -1,12 +1,37 @@
 import userImage from './exampleImg.jpg';
-
+import jmpressIMG from './assets/img/jm-press.jpg'
+import dumbellKickbackIMG from './assets/img/dumbell-kickback.jpg'
+import seatedTricepsIMG from './assets/img/seated-triceps.png'
+import exerciseIMG from './assets/img/exercise.jpg'
 export const Data = {
   'UserTrainings': [
-    {id: '1', name: 'triceps', duration: 25, type: 'strength'},
-    {id: '2', name: 'Chest&Biceps', duration: 60, type: 'strength'},
-    {id: '3', name: 'Cardio', duration: 30, type: 'cardio'},
-    {id: '4', name: 'Push', duration: 40, type: 'push'},
-    {id: '5', name: 'Pull', duration: 40, type: 'push'},
+    {id: '1', name: 'triceps', duration: 45, type: 'strength', exercises: [
+      {id: 'e1', name: 'Triceps dip', equipmentType: 'Body only', img: jmpressIMG},
+      {id: 'e2', name: 'Triceps dumbbel KickBack', equipmentType: 'Dumbell', img: dumbellKickbackIMG},
+      {id: 'e3', name: 'Seated triceps press', equipmentType: 'Dumbell', img: seatedTricepsIMG},
+      {id: 'e4', name: 'JM Press', equipmentType: 'Barbell', img: jmpressIMG},
+      {id: 'e5', name: 'Dumbell extensions', equipmentType: 'Barbell', img: exerciseIMG},
+    ]},
+    {id: '2', name: 'Chest&Biceps', duration: 20, type: 'strength', exercises: [
+      {id: 'e5', name: 'Benchpress', equipmentType: 'Barbell', img: exerciseIMG},
+      {id: 'e6', name: 'Hammer curl', equipmentType: 'Dumbell', img: exerciseIMG},
+    ]},
+    {id: '3', name: 'Cardio', duration: 50, type: 'cardio', exercises: [
+      {id: 'e7', name: 'Running - 30min', equipmentType: 'Body only', img: exerciseIMG},
+      {id: 'e8', name: 'Boxing - 20min', equipmentType: 'Boxing bag', img: exerciseIMG},
+    ]},
+    {id: '4', name: 'Push', duration: 40, type: 'push', exercises: [
+      {id: 'e1', name: 'Benchpress', equipmentType: 'Body only', img: exerciseIMG},
+      {id: 'e1', name: 'Ohp', equipmentType: 'Dumbell', img: exerciseIMG},
+      {id: 'e1', name: 'Seated triceps press', equipmentType: 'Dumbell', img: exerciseIMG},
+      {id: 'e1', name: 'JM Press', equipmentType: 'Barbell', img: exerciseIMG},
+    ]},
+    {id: '5', name: 'Pull', duration: 40, type: 'push', exercises: [
+      {id: 'e1', name: 'Deadlift', equipmentType: 'Barbell', img: exerciseIMG},
+      {id: 'e1', name: 'Triceps dumbbel KickBack', equipmentType: 'Dumbell', img: exerciseIMG},
+      {id: 'e1', name: 'Seated triceps press', equipmentType: 'Dumbell', img: exerciseIMG},
+      {id: 'e1', name: 'JM Press', equipmentType: 'Barbell', img: exerciseIMG},
+    ]},
   ],
   'UserDetailsAccount': {
     profileImage: userImage,
