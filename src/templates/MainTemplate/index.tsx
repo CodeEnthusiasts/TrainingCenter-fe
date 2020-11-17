@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import Navigation from '../../components/organisms/Navigation';
 import HeaderNavigation from '../../components/organisms/HeaderNavigation';
 import IMainTemplate from '../../__types__/IMainTemplate';
+import Routes from '../../routes';
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -9,6 +10,8 @@ const Container = styled.div`
   margin-top: 80px;
   overflow: hidden;
 `
+
+
 const MainTemplate: FC<IMainTemplate> = ({ buttons, children, routePath }) => {
   return (
     <>

@@ -28,7 +28,7 @@ export enum RoutePaths {
   PROFILE = '/profile',
   REGISTRATION = '/registration',
   ACHIEVEMENTS = '/achievements',
-  SETTINGS = '/settings',
+  SETTINGS = '/settings', 
   STATISTICS = '/statistics',
 }
 

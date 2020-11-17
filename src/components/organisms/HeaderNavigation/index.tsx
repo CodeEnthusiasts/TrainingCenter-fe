@@ -7,6 +7,7 @@ import Button from '../../atoms/Button'
 import H1 from '../../atoms/H1'
 import Icon from '../../atoms/Icon'
 import Routes from '../../../routes/'
+
 const getRouteData = (path:string) => {
   const Data = Routes.filter((element) => {
     return element.path === path

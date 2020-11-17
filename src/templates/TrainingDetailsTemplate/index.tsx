@@ -13,7 +13,7 @@ const TrainingDetailsTemplate:FC<ITrainingDetailsTemplate> = ({children, trainin
         <TrainingDetailsTile path={`/trainings/${trainingId}/exercises`} rotation={135} icon="fas fa-dumbbell"/>
         <TrainingDetailsTile path={`/trainings/${trainingId}/brakes`} icon="far fa-clock" />
         <TrainingDetailsTile path={`/trainings/${trainingId}/rest`} icon= "fas fa-battery-three-quarters" />
-        <TrainingDetailsTile path={`/trainings/${trainingId}/exercises`} icon= "fas fa-bed" />
+        <TrainingDetailsTile path={`/trainings/${trainingId}/`} icon= "fas fa-bed" />
       </TailsWrapper>
       {children}
     </> 
