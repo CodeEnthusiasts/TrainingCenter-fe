@@ -16,7 +16,7 @@ import {
 const TrainingCard:FC<ITrainingCardProps> = ({name, duration, id}) => {
   return (
     
-      <Card onClick={() => console.log("clicked")}>
+      <Card>
         <Link to={`/trainings/${id}/exercises`}> 
           <LightBoxShadow />
           <CardDetails>

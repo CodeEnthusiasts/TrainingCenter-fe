@@ -3,8 +3,7 @@ import { TailWrapper, LightShadow, Link} from './style'
 import Icon from '../../atoms/Icon'
 import { theme } from '../../../theme/mainTheme'
 import { useLocation } from 'react-router-dom';
-
-
+import { useHistory } from 'react-router-dom'
 interface ITrainingDetailsTile  {
   active?: boolean;
   icon: string;
@@ -13,12 +12,12 @@ interface ITrainingDetailsTile  {
 }
 
 const TrainingDetailsTile:FC<ITrainingDetailsTile> = ({rotation, icon, path }) => {
-    
+  let history = useHistory();
   const { pathname } = useLocation();
 
   return (
     <Link to={path}>
-      <TailWrapper active={path === pathname}>
+      <TailWrapper active={path === pathname} onClick={() => history.push('/trainings')}>
       <Icon 
         className={icon} 
         color={theme.colors.button.secondary.text} 
