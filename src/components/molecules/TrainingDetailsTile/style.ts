@@ -4,8 +4,8 @@ import styled from 'styled-components';
 
 const ActiveColor1 = theme.colors.button.secondary.color1;
 const ActiveColor2 = theme.colors.button.secondary.color2;
-const RegularColor1 = theme.colors.button.primmary.color1;
-const RegularColor2 = theme.colors.button.primmary.color2;
+const RegularColor1 = theme.colors.card.color1;
+const RegularColor2 = theme.colors.card.color2;
 const shadow1 = theme.colors.button.shadow.dark;
 const shadow2 = theme.colors.button.shadow.light;
 const size = 110;

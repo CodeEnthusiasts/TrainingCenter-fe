@@ -51,13 +51,7 @@ export default function Account() {
   const { name, profileImage, ...details } = Data.UserDetailsAccount;
 
   return (
-    <MainTemplate
-      routePath={ RoutePaths.ACCOUNT }
-      buttons={{ 
-        leftBtn: 'Back',
-        rightBtn: 'Edit',
-      }}
-    >
+    <MainTemplate routePath={ RoutePaths.ACCOUNT } buttons={{ leftBtn: 'Back', rightBtn: 'Menu'}}>
       <AccountWrapper>
         <ProfileImage src={ profileImage } alt="" size="150px" />
         <H1>{ name }</H1>

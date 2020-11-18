@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const HeaderWrapper = styled.div`
   position: fixed;
   width: 100%;
-  padding: 10px 20px;
+  padding: 20px;
   top: 0;
   left: 50%;
   transform: translateX(-50%);

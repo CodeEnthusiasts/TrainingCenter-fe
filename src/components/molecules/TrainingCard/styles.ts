@@ -1,5 +1,10 @@
+import { theme } from './../../../theme/mainTheme';
+import { colors } from './../../../theme/ThemeValues';
 import { Link as LinkProp} from 'react-router-dom'
 import styled, {css} from 'styled-components'
+
+const color1 = theme.colors.card.color1;
+const color2 = theme.colors.card.color2;
 
 const CardSize = {
   width: '330px',
@@ -22,20 +27,14 @@ export const Card = styled.li`
   height: ${CardSize.height};
 
   ${({theme}) => css`
-    border: 2px solid ${theme.colors.button.primmary.color2};
-    background: ${theme.colors.button.primmary.color1};
-    background: -moz-linear-gradient(0deg, 
-              ${theme.colors.button.primmary.color1} 0%, 
-              ${theme.colors.button.primmary.color2} 100%);
-    background: -webkit-linear-gradient(0deg, 
-              ${theme.colors.button.primmary.color1} 0%, 
-              ${theme.colors.button.primmary.color2} 100%);
-    background: linear-gradient(0deg,
-              ${theme.colors.button.primmary.color1} 0%, 
-              ${theme.colors.button.primmary.color2} 100%);
+    border: 2px solid ${color1};
+    background: ${color1};
+    background: -moz-linear-gradient(0deg, ${color1} 0%, ${color2} 100%);
+    background: -webkit-linear-gradient(0deg, ${color1} 0%, ${color2} 100%);
+    background: linear-gradient(0deg,${color1} 0%,  ${color2} 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(
-      startColorstr=${theme.colors.button.primmary.color1},
-      endColorstr=${theme.colors.button.primmary.color2},
+      startColorstr=${color1},
+      endColorstr=${color2},
       GradientType=1
       );
     -webkit-box-shadow: 10px 10px 18px -6px ${theme.colors.button.shadow.dark};
