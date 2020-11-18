@@ -2,7 +2,8 @@ export interface IColors {
   primmary: IBasicColors,
   secondary: IBasicColors,
   button: IButtonColors,
-  background: IBackgroundColors
+  background: IBackgroundColors,
+  card: ICard
 }
 
 interface IBackgroundColors {
@@ -12,7 +13,10 @@ interface IBackgroundColors {
     color2: string,
   }
 }
-
+interface ICard {
+  color1: string,
+  color2: string,
+}
 interface IBasicColors {
   color1: string,
   color2: string,
