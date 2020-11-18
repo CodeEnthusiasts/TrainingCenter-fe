@@ -13,7 +13,7 @@ const ProfileWrapper = styled.div`
 
 export default function Profile() { 
   return (
-    <MainTemplate routePath={ RoutePaths.PROFILE } buttons={{leftBtn: 'Back', rightBtn: 'Menu'}}>
+    <MainTemplate routePath={ RoutePaths.PROFILE } buttons={{leftBtn: 'Back', rightBtn: ''}}>
       <ProfileWrapper>
           <ProfileLink path={ RoutePaths.EDIT_ACCOUNT } iconClassName="fas fa-user" />
           <ProfileLink path={ RoutePaths.STATISTICS } iconClassName="fas fa-chart-bar" />

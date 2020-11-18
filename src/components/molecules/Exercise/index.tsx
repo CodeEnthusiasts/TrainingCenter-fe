@@ -23,7 +23,7 @@ const Exercise:FC<IExercise> = ({name, equipmentType, id, img}) => {
           </ExerciseDescription>
           <Link to={`/${id}/exercise-details`}>
           <Button radius={45}>
-            <Icon className="fas fa-angle-right" color={theme.colors.secondary.color1}/>
+            <Icon className="fas fa-angle-right" color={theme.colors.button.primmary.text}/>
           </Button>
           </Link>
  

@@ -22,14 +22,14 @@ const HeaderNavigation:FC<IHeaderNavigation> = ({title, buttons}) => {
     {
       id: '1',
       name: 'Back',
-      icon: "fas fa-long-arrow-alt-left",
+      icon: "fas fa-angle-left",
       action: () => history.goBack()
     },
     {
       id: '2',
       name: 'Menu',
       icon: "fas fa-bars",
-      linkTo: '/settings',
+      linkTo: '/profile',
       action: () => console.log("Moving to menu"),
     },
     {
@@ -38,6 +38,7 @@ const HeaderNavigation:FC<IHeaderNavigation> = ({title, buttons}) => {
       linkTo: '/',
       icon: "fas fa-check",
       action: () => console.log("Accept changes"),
+      secondary: true
     },
     {
       id: '4',
@@ -50,10 +51,9 @@ const HeaderNavigation:FC<IHeaderNavigation> = ({title, buttons}) => {
       id: '5',
       name: 'Edit',
       linkTo: '/',
-      icon: "fas fa-edit",
+      icon: "fas fa-pen",
       action: () => console.log("Edit mode"),
     }
-    
   ]
 
   return <HeaderWrapper>   
@@ -61,7 +61,7 @@ const HeaderNavigation:FC<IHeaderNavigation> = ({title, buttons}) => {
           return(
             (buttons.leftBtn === e.name) &&
             <Button radius={45} onClick={e.action} key={e.id}>
-              <Icon className={e.icon} color={theme.colors.secondary.color1}/>
+              <Icon className={e.icon} color={theme.colors.button.primmary.text}/>
             </Button>
           )
         })}
@@ -72,8 +72,8 @@ const HeaderNavigation:FC<IHeaderNavigation> = ({title, buttons}) => {
           return (
             (buttons.rightBtn === e.name) && e.linkTo && e.action &&
               <HeaderLink to={e.linkTo} key={e.id}> 
-                <Button radius={45} onClick={e.action}>
-                  <Icon className={e.icon} color={theme.colors.secondary.color1}/>
+                <Button secondary={e.secondary} radius={45} onClick={e.action}>
+                  <Icon className={e.icon} color={theme.colors.button.primmary.text}/>
                 </Button>
               </HeaderLink>
           )

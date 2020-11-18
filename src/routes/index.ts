@@ -11,7 +11,7 @@ import NotFound from '../views/404';
 import Trainings from '../views/Trainings';
 import TrainingExercises from '../views/TrainingExercises'
 import TrainingBrakes from '../views/TrainingBrakes';
-import TrainingRest from '../views/TrainingRest'
+import TrainingNotes from '../views/TrainingNotes'
 import Atlas from '../views/Atlas'
 import TrainingHistory from '../views/TrainingHistory';
 export enum RoutePaths {
@@ -20,7 +20,7 @@ export enum RoutePaths {
   TRAINING = '/trainings/:trainingId',
   TRAINING_EXERCISES = '/trainings/:trainingId/exercises',
   TRAINING_BRAKES = '/trainings/:trainingId/brakes',
-  TRAINING_REST = '/trainings/:trainingId/rest',
+  TRAINING_NOTES = '/trainings/:trainingId/notes',
   TRAINING_HISTORY = '/traininghistory',
   ATLAS = '/atlas',
   ACCOUNT = '/account',
@@ -74,9 +74,9 @@ const routes: IRoute[] = [
     }
   },
   {
-    path: RoutePaths.TRAINING_REST,
+    path: RoutePaths.TRAINING_NOTES,
     exact: true,
-    component: TrainingRest,
+    component: TrainingNotes,
     data: {
       'title': 'Training'
     }
