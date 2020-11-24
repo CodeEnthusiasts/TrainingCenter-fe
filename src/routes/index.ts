@@ -14,6 +14,8 @@ import TrainingBrakes from '../views/TrainingBrakes';
 import TrainingNotes from '../views/TrainingNotes'
 import Atlas from '../views/Atlas'
 import TrainingHistory from '../views/TrainingHistory';
+import SignIn from '../views/SignIn';
+
 export enum RoutePaths {
   HOME = '/',
   TRAININGS = '/trainings',
@@ -30,6 +32,7 @@ export enum RoutePaths {
   ACHIEVEMENTS = '/achievements',
   SETTINGS = '/settings', 
   STATISTICS = '/statistics',
+  SIGN_IN = '/sign-in',
 }
 
 const routes: IRoute[] = [
@@ -143,6 +146,14 @@ const routes: IRoute[] = [
     component: Statistics,
     data: {
       'title': 'Statistics'
+    }
+  },
+  {
+    path: RoutePaths.SIGN_IN,
+    exact: true,
+    component: SignIn,
+    data: {
+      'title': 'Sign in'
     }
   },
   {
