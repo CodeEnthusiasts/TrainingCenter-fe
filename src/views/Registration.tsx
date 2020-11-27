@@ -1,6 +1,7 @@
 import React from 'react';
 import H1 from '../components/atoms/H1';
 import SignUpForm from '../components/molecules/SignUpForm';
+import Logo from '../components/molecules/Logo';
 import styled from 'styled-components';
 
 const RegistrationWrapper = styled.div`
@@ -19,6 +20,7 @@ export default function Registration() {
   return (
     <RegistrationWrapper>
       <H1>Registration</H1>
+      <Logo />
       <SignUpForm />
     </RegistrationWrapper>
   )
