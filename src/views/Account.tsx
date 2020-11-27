@@ -51,7 +51,7 @@ export default function Account() {
   
   const { profileImage, ...details } = Data.UserDetailsAccount;
   // this username stuff is for testing purposes
-  const [username, setUsername] = useState<string>('');
+  const [username, setUsername] = useState<string>('loading');
 
   useEffect(() => { 
     (async () => {
@@ -64,7 +64,7 @@ export default function Account() {
     <MainTemplate routePath={ RoutePaths.ACCOUNT } buttons={{ leftBtn: 'Back', rightBtn: 'Menu'}}>
       <AccountWrapper>
         <ProfileImage src={ profileImage } alt="" size="150px" />
-        <H1>{ username.length > 0 ? username : 'loading' }</H1>
+        <H1>{ username }</H1>
         <TilesWrapper>
           { Object.entries(details).map(([detail, value], i) => 
               <AccountTile 
