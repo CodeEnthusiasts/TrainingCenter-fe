@@ -1,5 +1,3 @@
-import { colors } from './../../../theme/ThemeValues';
-import { Button } from './../UniversalAccountButton/styles';
 import styled, { css } from 'styled-components';
 
 const TileSize = {
