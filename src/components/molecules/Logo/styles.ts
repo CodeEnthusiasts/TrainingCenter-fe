@@ -11,6 +11,6 @@ export const Div = styled.div`
   margin: 50px 0;
   ${({ theme }) => css`
     color: ${theme.colors.primmary.color1};
-    border: 2px solid ${theme.colors.primmary.color1};
+    border: 3px solid ${theme.colors.primmary.color1};
   `}
 `;
