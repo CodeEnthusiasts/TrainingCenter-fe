@@ -1,18 +1,28 @@
-import React, { FC, FormEvent } from 'react';
+import React, { FC, createElement } from 'react';
 import IAccessForm from '../../../__types__/IAccessForm';
+import { useForm } from 'react-hook-form';
 import { Form } from './styles';
 
 const AccessForm:FC<IAccessForm> = ({ children, onSubmit }) => {
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    await onSubmit(); 
+  const { register, handleSubmit, getValues } = useForm();
+
+  const submitFunction = async () => {
+    console.log(getValues());
+    await onSubmit();
     // here token will be added to localStorage
   }
 
   return (
-    <Form onSubmit={ handleSubmit }>
-      { children }
+    <Form onSubmit={ handleSubmit(submitFunction) }>
+      {
+        children.map((Child) => {
+          if (Child.type === 'input') {
+            Child = createElement('input', { ...Child.props, ref: register });
+          }
+          return Child
+        })
+      }
     </Form>
   )
 }
