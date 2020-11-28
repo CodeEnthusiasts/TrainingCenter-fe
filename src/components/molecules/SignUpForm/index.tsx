@@ -1,13 +1,18 @@
 import React from 'react';
 import AccessForm from '../AccessForm';
-import { SignUp } from '../../../axios/endpoints/auth';
+import { tryToSignIn } from '../../../axios/endpoints/auth';
 import ISignUpParams from '../../../__types__/ISignUpParams';
 
 const SignUpForm = () => {
 
   const onSubmit = async (params: any) => {
-    const result = await SignUp(params as ISignUpParams);
-    console.log(result);
+    const result = await tryToSignIn(params as ISignUpParams);
+
+    if (!(result instanceof Error)) {
+      console.log('Registration succesful!')
+    } else {
+      console.log(result.message)
+    }
   }
   
   return (
@@ -19,7 +24,7 @@ const SignUpForm = () => {
       <label htmlFor="password"></label>
       <input name="password" type="password" placeholder="password" />
       <label htmlFor="confirmPassword"></label>
-      <input name="confirmPassword" type="password" placeholder="confirm password" />
+      <input  name="confirmPassword" type="password" placeholder="confirm password" />
       <button type="submit">
         Sign up
       </button>

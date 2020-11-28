@@ -1,13 +1,19 @@
 import React from 'react';
 import AccessForm from '../AccessForm';
 import ISignInParams from '../../../__types__/ISignInParams';
-import { SignIn } from '../../../axios/endpoints/auth';
+import { tryToSignIn } from '../../../axios/endpoints/auth';
 
 const SignInForm = () => {
 
   const onSubmit = async (params: any) => {
-    const result = await SignIn(params as ISignInParams);
-    console.log(result);
+    const result = await tryToSignIn(params as ISignInParams);
+
+    if (!(result instanceof Error)) {
+      // localStorage.setItem('token', result.token);
+      console.log(`${result.username} has logged in!`);
+    } else {
+      console.log(result.message);
+    }
   }
 
   return (
