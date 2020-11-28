@@ -4,6 +4,7 @@ export interface IColors {
   button: IButtonColors,
   background: IBackgroundColors,
   card: ICard
+  input: IInput;
 }
 
 interface IBackgroundColors {
@@ -16,6 +17,11 @@ interface IBackgroundColors {
 interface ICard {
   color1: string,
   color2: string,
+}
+interface IInput {
+  background: string,
+  darkShadow: string,
+  lightShadow: string,
 }
 interface IBasicColors {
   color1: string,
@@ -37,5 +43,6 @@ interface IButtonColors {
   shadow: {
     dark: string
     light: string
+    glow: string
   },
 }
