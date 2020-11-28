@@ -92,7 +92,7 @@ export const Data = {
   ],
   'UserDetailsAccount': {
     profileImage: userImage,
-    name: 'Jan Kowalski',
+    // name: 'Jan Kowalski',
     weight: '90 kg',
     height: '188 cm',
     age: '23',
