@@ -12,8 +12,10 @@ import Trainings from '../views/Trainings';
 import TrainingExercises from '../views/TrainingExercises'
 import TrainingBrakes from '../views/TrainingBrakes';
 import TrainingNotes from '../views/TrainingNotes'
-import Atlas from '../views/Atlas'
+import Atlas from '../views/ExerciseFinder'
 import TrainingHistory from '../views/TrainingHistory';
+import ExerciseFinder from '../views/ExerciseFinder';
+
 export enum RoutePaths {
   HOME = '/',
   TRAININGS = '/trainings',
@@ -22,7 +24,7 @@ export enum RoutePaths {
   TRAINING_BRAKES = '/trainings/:trainingId/brakes',
   TRAINING_NOTES = '/trainings/:trainingId/notes',
   TRAINING_HISTORY = '/traininghistory',
-  ATLAS = '/atlas',
+  EXERCISE_FINDER = '/exercise-finder',
   ACCOUNT = '/account',
   EDIT_ACCOUNT = '/edit-account',
   PROFILE = '/profile',
@@ -42,11 +44,11 @@ const routes: IRoute[] = [
     }
   },
   {
-    path: RoutePaths.ATLAS,
+    path: RoutePaths.EXERCISE_FINDER,
     exact: true,
-    component: Atlas,
+    component: ExerciseFinder,
     data: {
-      'title': 'Atlas'
+      'title': 'Exercise Finder'
     }
   },
   {

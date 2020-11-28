@@ -3,13 +3,12 @@ import { RoutePaths } from '../../../routes';
 import ProfileImage from '../../atoms/ProfileImage';
 import ProfileImageSrc from '../../../exampleImg.jpg';
 import NavButton from '../../molecules/NavigationButton';
-import { Nav } from './styles';
 import Icon from '../../atoms/Icon';
+import { Nav } from './styles';
 import { useLocation } from 'react-router-dom';
 import { theme } from '../../../theme/mainTheme';
 
 export default function Navigation() {
-  
   const { pathname } = useLocation();
 
   return (
@@ -23,7 +22,7 @@ export default function Navigation() {
           color={theme.colors.secondary.color2 } />
       </NavButton>
 
-      <NavButton path={ RoutePaths.ATLAS } location={ pathname }>
+      <NavButton path={ RoutePaths.EXERCISE_FINDER } location={ pathname }>
         <Icon className="fas fa-search" size={ 2.5 } color={ theme.colors.secondary.color2 } />
       </NavButton>
       <NavButton path={ RoutePaths.TRAININGS } location={ pathname } isSpecial={ true }>
