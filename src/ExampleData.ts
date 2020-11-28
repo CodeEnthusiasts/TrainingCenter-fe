@@ -33,6 +33,63 @@ export const Data = {
       {id: 'e1', name: 'JM Press', equipmentType: 'Barbell', img: exerciseIMG},
     ]},
   ],
+  'Exercises': [
+    { 
+      id: 'e1', 
+      name: 'Triceps Dip', 
+      equipmentType: 'Body only', 
+      img: jmpressIMG, 
+      difficulty: 'beginner', 
+      exerciseType: 'Powerlifting', 
+      musclesEnvolved: [
+        {name: 'Chest'},
+      ]
+    },
+    {
+      id: 'e2', 
+      name: 'Triceps dumbbel KickBack', 
+      equipmentType: 'Dumbell', 
+      img: dumbellKickbackIMG,
+      difficulty: 'intermediate', 
+      exerciseType: 'Powerlifting', 
+      musclesEnvolved: [
+        {name: 'Triceps'},
+      ]
+    },
+    {
+      id: 'e3', 
+      name: 'Seated triceps press', 
+      equipmentType: 'Dumbell', 
+      img: seatedTricepsIMG,
+      difficulty: 'expert', 
+      exerciseType: 'Powerlifting', 
+      musclesEnvolved: [
+        {name: 'Triceps'}
+      ]
+    },
+    {
+      id: 'e4', 
+      name: 'JM Press', 
+      equipmentType: 'Barbell', 
+      img: jmpressIMG,
+      difficulty: 'beginner', 
+      exerciseType: 'Powerlifting', 
+      musclesEnvolved: [
+        {name: 'Chest'}
+      ]
+    },
+    {
+      id: 'e5', 
+      name: 'Dumbell extensions', 
+      equipmentType: 'Barbell', 
+      img: exerciseIMG,
+      difficulty: 'intermediate', 
+      exerciseType: 'Powerlifting', 
+      musclesEnvolved: [
+        {name: 'Chest'}
+      ]
+    },
+  ],
   'UserDetailsAccount': {
     profileImage: userImage,
     name: 'Jan Kowalski',
