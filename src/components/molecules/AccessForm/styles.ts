@@ -15,7 +15,9 @@ export const Form = styled.form`
     color: ${({ theme }) => theme.colors.secondary.color1};
     background: none;
     padding: 4px 7px;
-    text-transform: capitalize;
+    ::placeholder {
+      text-transform: capitalize;
+    }
   }
   & > button {
     margin: 50px 0;

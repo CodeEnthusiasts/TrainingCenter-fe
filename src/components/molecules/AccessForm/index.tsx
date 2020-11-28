@@ -15,9 +15,9 @@ const AccessForm:FC<IAccessForm> = ({ children, onSubmit, sideLinkContent, sideL
   return (
     <Form onSubmit={ handleSubmit(submitFunction) }>
       {
-        children.map((Child) => {
+        children.map((Child, i) => {
           if (Child.type === 'input') {
-            Child = createElement('input', { ...Child.props, ref: register });
+            Child = createElement('input', { ...Child.props, ref: register, key: i });
           }
           return Child
         })
