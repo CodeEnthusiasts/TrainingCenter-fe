@@ -19,7 +19,6 @@ export default function Registration() {
 
   return (
     <RegistrationWrapper>
-      <H1>Registration</H1>
       <Logo />
       <SignUpForm />
     </RegistrationWrapper>
