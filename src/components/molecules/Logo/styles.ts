@@ -6,11 +6,11 @@ export const Div = styled.div`
   text-align: center;
   vertical-align: middle;
   line-height: 100px;
-  font-size: 20px;
   text-transform: uppercase;
   margin: 50px 0;
   ${({ theme }) => css`
-    color: ${theme.colors.primmary.color1};
-    border: 3px solid ${theme.colors.primmary.color1};
+    font-size: ${theme.fontSize.xl};
+    color: ${theme.colors.secondary.color1};
+    border: 4px solid ${theme.colors.secondary.color1};
   `}
 `;
