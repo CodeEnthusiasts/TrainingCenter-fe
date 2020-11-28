@@ -2,6 +2,8 @@ import React from 'react';
 import AccessForm from '../AccessForm';
 import ISignInParams from '../../../__types__/ISignInParams';
 import { tryToSignIn } from '../../../axios/endpoints/auth';
+import Icon from '../../atoms/Icon';
+import { RoutePaths } from '../../../routes';
 
 const SignInForm = () => {
 
@@ -17,13 +19,18 @@ const SignInForm = () => {
   }
 
   return (
-    <AccessForm onSubmit={ onSubmit }>
+    <AccessForm 
+      onSubmit={ onSubmit }
+      sideLinkContent="Don't have an account yet? Sign up now!"
+      sideLinkTo={ RoutePaths.REGISTRATION }
+    >
       <label htmlFor="username"></label>
       <input name="username" type="text" placeholder="username" />
       <label htmlFor="password"></label>
       <input name="password" type="password" placeholder="password" />
       <button type="submit">
-        Sign in
+        <Icon className="fas fa-angle-double-right" size={ 1.3 } color="inherit" />
+        &nbsp;Login
       </button>
     </AccessForm>
   )
