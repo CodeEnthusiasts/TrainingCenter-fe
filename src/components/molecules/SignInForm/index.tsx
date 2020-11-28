@@ -1,13 +1,13 @@
 import React from 'react';
 import AccessForm from '../AccessForm';
-// import ISignInParams from '../../../__types__/ISignInParams';
-// import { SignIn } from '../../../axios/endpoints/auth';
+import ISignInParams from '../../../__types__/ISignInParams';
+import { SignIn } from '../../../axios/endpoints/auth';
 
 const SignInForm = () => {
 
-  const onSubmit = async () => {
-    // this part will be handled after authorization errors will be resolved
-    // const result = await SignIn(getValues() as ISignInParams);
+  const onSubmit = async (params: any) => {
+    const result = await SignIn(params as ISignInParams);
+    console.log(result);
   }
 
   return (

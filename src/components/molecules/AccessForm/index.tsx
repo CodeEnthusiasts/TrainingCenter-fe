@@ -8,9 +8,7 @@ const AccessForm:FC<IAccessForm> = ({ children, onSubmit }) => {
   const { register, handleSubmit, getValues } = useForm();
 
   const submitFunction = async () => {
-    console.log(getValues());
-    await onSubmit();
-    // here token will be added to localStorage
+    await onSubmit(getValues());
   }
 
   return (

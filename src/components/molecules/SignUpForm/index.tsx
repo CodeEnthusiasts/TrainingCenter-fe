@@ -1,13 +1,13 @@
 import React from 'react';
 import AccessForm from '../AccessForm';
-// import { SignUp } from '../../../axios/endpoints/auth';
-// import ISignUpParams from '../../../__types__/ISignUpParams';
+import { SignUp } from '../../../axios/endpoints/auth';
+import ISignUpParams from '../../../__types__/ISignUpParams';
 
 const SignUpForm = () => {
 
-  const onSubmit = async () => {
-    // this part will be handled after authorization errors will be resolved
-    // const result = await SignUp(getValues() as ISignUpParams);
+  const onSubmit = async (params: any) => {
+    const result = await SignUp(params as ISignUpParams);
+    console.log(result);
   }
   
   return (
