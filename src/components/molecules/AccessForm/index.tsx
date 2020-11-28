@@ -1,9 +1,10 @@
 import React, { FC, createElement } from 'react';
 import IAccessForm from '../../../__types__/IAccessForm';
+import AccessFormLink from '../AccessFormLink';
 import { useForm } from 'react-hook-form';
 import { Form } from './styles';
 
-const AccessForm:FC<IAccessForm> = ({ children, onSubmit }) => {
+const AccessForm:FC<IAccessForm> = ({ children, onSubmit, sideLinkContent, sideLinkTo }) => {
 
   const { register, handleSubmit, getValues } = useForm();
 
@@ -21,6 +22,7 @@ const AccessForm:FC<IAccessForm> = ({ children, onSubmit }) => {
           return Child
         })
       }
+      <AccessFormLink to={ sideLinkTo } content={ sideLinkContent } />
     </Form>
   )
 }
