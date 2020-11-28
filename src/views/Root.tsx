@@ -3,9 +3,10 @@ import GlobalStyle  from '../theme/globalStyles';
 import { ThemeProvider } from 'styled-components';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import routes from '../routes';
-import { theme } from '../theme/mainTheme'
+import { theme } from '../theme/mainTheme';
 
 function Root() {
+
   return (
     <ThemeProvider theme={ theme }>
       <Router>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import AccountTile from '../components/molecules/AccountTile';
 import { Data } from '../ExampleData';
 import H1Proto from '../components/atoms/H1';
@@ -6,6 +6,7 @@ import ProfileImage from '../components/atoms/ProfileImage';
 import styled from 'styled-components';
 import { RoutePaths } from '../routes';
 import MainTemplate from '../templates/MainTemplate';
+import { Users } from '../axios/endpoints/user';
 
 const icons = [ // assuming that data will be passed in this order
   'fas fa-weight-hanging',
@@ -48,13 +49,22 @@ const TilesWrapper = styled.div`
 
 export default function Account() {
   
-  const { name, profileImage, ...details } = Data.UserDetailsAccount;
+  const { profileImage, ...details } = Data.UserDetailsAccount;
+  // this username stuff is for testing purposes
+  const [username, setUsername] = useState<string>('loading');
+
+  useEffect(() => { 
+    (async () => {
+      const { username } = await Users.getById(1);
+      setUsername(() => username);
+    })()
+  }, [])
 
   return (
     <MainTemplate routePath={ RoutePaths.ACCOUNT } buttons={{ leftBtn: 'Back', rightBtn: 'Menu'}}>
       <AccountWrapper>
         <ProfileImage src={ profileImage } alt="" size="150px" />
-        <H1>{ name }</H1>
+        <H1>{ username }</H1>
         <TilesWrapper>
           { Object.entries(details).map(([detail, value], i) => 
               <AccountTile 
