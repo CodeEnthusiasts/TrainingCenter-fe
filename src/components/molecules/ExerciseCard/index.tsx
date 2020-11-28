@@ -17,25 +17,27 @@ const ExerciseCard:FC<IExerciseCard> = ({name, difficulty, type, muscles, img}) 
       <ExerciseContnet>
         <CardSide>
           <H1 color={theme.colors.primmary.color1}>{name}</H1>
-          <ExerciseDetailsContainer >
-            <CardSection>
+          <ExerciseDetailsContainer>
+            
+            {difficulty && <CardSection>
               <P>Difficulty</P>
-              <DifficultyScale level={difficulty}/>
-            </CardSection>
+               <DifficultyScale level={difficulty}/>
+            </CardSection>}
 
             <CardSection>
               <P>Exercise type:</P>
               <P color={theme.colors.secondary.color3}>
-                <b>{type}</b>
+                <b>{type && type}</b>
               </P>
             </CardSection>
 
-            <CardSection>
+            {muscles &&  <CardSection>
               <P>Muscles envolved:</P>
               <P color={theme.colors.secondary.color3}>
                 {muscles.map((muscle,idx) => { return <b key={idx}>{muscle.name}</b> })}
               </P>
-            </CardSection>
+            </CardSection>}
+           
           </ExerciseDetailsContainer>
             <CardSection>
               <Button radius={30}>
@@ -52,9 +54,7 @@ const ExerciseCard:FC<IExerciseCard> = ({name, difficulty, type, muscles, img}) 
         <CardSide> 
           <ExercisePreview>
             <ExerciseImage src={img} />
-            <InfoButton>
-              More Info
-            </InfoButton>
+            <InfoButton> More Info </InfoButton>
           </ExercisePreview>
         </CardSide>
       </ExerciseContnet>
