@@ -42,25 +42,12 @@ export const ButtonWrapper = styled.button<{radius?: number, secondary?:boolean,
       endColorstr = ${secondary ?  secondary2 : primmary1},
       GradientType = 1
       );
-    -webkit-box-shadow: 10px 10px 18px -6px ${theme.colors.button.shadow.dark};
-    -moz-box-shadow: 10px 10px 18px -6px ${theme.colors.button.shadow.dark};
-    box-shadow: 5px 5px 11px -6px ${theme.colors.button.shadow.dark};  
+    -webkit-box-shadow: 10px 10px 18px -6px ${theme.colors.button.shadow.dark},
+                        -5px -5px 11px -6px ${theme.colors.button.shadow.light};
+    -moz-box-shadow: 10px 10px 18px -6px ${theme.colors.button.shadow.dark}, 
+                    -5px -5px 11px -6px ${theme.colors.button.shadow.light};
+    box-shadow: 5px 5px 11px -6px ${theme.colors.button.shadow.dark}, 
+                -5px -5px 11px -6px ${theme.colors.button.shadow.light};  
     border: 1px solid ${secondary ?  secondary2 : primmary1};
   `}
 `;
-
-export const LightBoxShadow = styled.div<{radius?: number}>`
-  position: absolute;
-  top: 0;
-  left: 0;
-  
-  ${({theme, radius}) => css`
-    width: ${radius ? radius : DefaultButtonRadius}px;
-    height: ${radius ? radius : DefaultButtonRadius}px;
-    border-radius: ${radius ? radius/2 : DefaultButtonRadius/2}px;
-    -webkit-box-shadow: -10px -10px 18px -6px ${theme.colors.button.shadow.light};
-    -moz-box-shadow: -10px -10px 18px -6px ${theme.colors.button.shadow.light};
-    box-shadow: -5px -5px 11px -6px ${theme.colors.button.shadow.light};
-  `}
-  
-`
