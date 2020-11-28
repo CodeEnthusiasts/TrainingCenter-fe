@@ -18,8 +18,8 @@ const SignUpForm = () => {
       <input name="email" type="text" placeholder="e-mail" />
       <label htmlFor="password"></label>
       <input name="password" type="password" placeholder="password" />
-      <label htmlFor="confirm-password"></label>
-      <input name="confim-password" type="password" placeholder="confirm password" />
+      <label htmlFor="confirmPassword"></label>
+      <input name="confirmPassword" type="password" placeholder="confirm password" />
       <button type="submit">
         Sign up
       </button>
