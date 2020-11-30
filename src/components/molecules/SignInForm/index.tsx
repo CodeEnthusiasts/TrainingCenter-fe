@@ -4,6 +4,12 @@ import ISignInParams from '../../../__types__/ISignInParams';
 import { tryToSignIn } from '../../../axios/endpoints/auth';
 import Icon from '../../atoms/Icon';
 import { RoutePaths } from '../../../routes';
+import IInputFormProps from '../../../__types__/IInputFormProps';
+
+const props: IInputFormProps[] = [
+  { registerRules: { required: true } }, // username
+  { registerRules: { required: true } }, // password
+]
 
 const SignInForm = () => {
 
@@ -20,6 +26,7 @@ const SignInForm = () => {
 
   return (
     <AccessForm 
+      inputFormProps={ props }
       onSubmit={ onSubmit }
       sideLinkContent="Don't have an account yet? Sign up now!"
       sideLinkTo={ RoutePaths.REGISTRATION }
