@@ -5,9 +5,7 @@ import ISignUpParams from '../../../__types__/ISignUpParams';
 import Icon from '../../atoms/Icon';
 import { RoutePaths } from '../../../routes';
 import IInputFormProps from '../../../__types__/IInputFormProps';
-
-const emailPattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-const noSpacesPattern = /^\S+$/;
+import { noSpacesPattern, emailPattern } from '../../../regex';
 
 const SignUpForm = () => {
 
