@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { IsUserLoggedContext } from '../../../contexts/signedUser';
 import AccessForm from '../AccessForm';
 import ISignInParams from '../../../__types__/ISignInParams';
 import { tryToSignIn } from '../../../axios/endpoints/auth';
 import Icon from '../../atoms/Icon';
 import { RoutePaths } from '../../../routes';
 import IInputFormProps from '../../../__types__/IInputFormProps';
+import ILocalStorageUserData from '../../../__types__/ILocalStorageUserData';
 
 const props: IInputFormProps[] = [
   { registerRules: { required: true } }, // username
@@ -13,11 +15,19 @@ const props: IInputFormProps[] = [
 
 const SignInForm = () => {
 
+  const { setIsSigned } = useContext(IsUserLoggedContext);
+
   const onSubmit = async (params: any) => {
     const result = await tryToSignIn(params as ISignInParams);
 
     if (!(result instanceof Error)) {
-      // localStorage.setItem('token', result.token);
+      const localStorageUserData: ILocalStorageUserData = {
+        id: result.id,
+        roles: result.roles,
+        token: result.token,
+      }
+      localStorage.setItem('loggedUser', JSON.stringify(localStorageUserData));
+      setIsSigned(() => true);
       console.log(`${result.username} has logged in!`);
     } else {
       console.log(result.message);

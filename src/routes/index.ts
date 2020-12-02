@@ -40,6 +40,7 @@ const routes: IRoute[] = [
     path: RoutePaths.TRAININGS,
     exact: true,
     component: Trainings,
+    signedInRequired: true,
     data: {
       'title': 'Trainings'
     }
@@ -48,6 +49,7 @@ const routes: IRoute[] = [
     path: RoutePaths.EXERCISE_FINDER,
     exact: true,
     component: ExerciseFinder,
+    signedInRequired: true,
     data: {
       'title': 'Exercise Finder'
     }
@@ -56,6 +58,7 @@ const routes: IRoute[] = [
     path: RoutePaths.TRAINING_HISTORY,
     exact: true,
     component: TrainingHistory,
+    signedInRequired: true,
     data: {
       'title': 'Training history'
     }
@@ -64,6 +67,7 @@ const routes: IRoute[] = [
     path: RoutePaths.TRAINING_EXERCISES,
     exact: true,
     component: TrainingExercises,
+    signedInRequired: false,
     data: {
       'title': 'Training'
     }
@@ -72,6 +76,7 @@ const routes: IRoute[] = [
     path: RoutePaths.TRAINING_BRAKES,
     exact: true,
     component: TrainingBrakes,
+    signedInRequired: true,
     data: {
       'title': 'Training'
     }
@@ -80,6 +85,7 @@ const routes: IRoute[] = [
     path: RoutePaths.TRAINING_NOTES,
     exact: true,
     component: TrainingNotes,
+    signedInRequired: true,
     data: {
       'title': 'Training'
     }
@@ -88,6 +94,7 @@ const routes: IRoute[] = [
     path: RoutePaths.HOME,
     exact: true,
     component: Home,
+    signedInRequired: true,
     data: {
       'title': 'Home'
     }
@@ -96,6 +103,7 @@ const routes: IRoute[] = [
     path: RoutePaths.ACCOUNT,
     exact: true,
     component: Account,
+    signedInRequired: true,
     data: {
       'title': 'Account'
     }
@@ -104,6 +112,7 @@ const routes: IRoute[] = [
     path: RoutePaths.EDIT_ACCOUNT,
     exact: true,
     component: EditAccount,
+    signedInRequired: true,
     data: {
       'title': 'Account'
     }
@@ -112,6 +121,7 @@ const routes: IRoute[] = [
     path: RoutePaths.PROFILE,
     exact: true,
     component: Profile,    
+    signedInRequired: true,
     data: {
       'title': 'Profile',
     }
@@ -120,6 +130,7 @@ const routes: IRoute[] = [
     path: RoutePaths.REGISTRATION,
     exact: true,
     component: Registeration,
+    signedInRequired: false,
     data: {
       'title': 'Registration'
     }
@@ -128,6 +139,7 @@ const routes: IRoute[] = [
     path: RoutePaths.ACHIEVEMENTS,
     exact: true,
     component: Achievements,
+    signedInRequired: true,
     data: {
       'title': 'Achievements'
     }
@@ -136,6 +148,7 @@ const routes: IRoute[] = [
     path: RoutePaths.SETTINGS,
     exact: true,
     component: Settings,
+    signedInRequired: false,
     data: {
       'title': 'Settings'
     }
@@ -144,6 +157,7 @@ const routes: IRoute[] = [
     path: RoutePaths.STATISTICS,
     exact: true,
     component: Statistics,
+    signedInRequired: true,
     data: {
       'title': 'Statistics'
     }
@@ -152,6 +166,7 @@ const routes: IRoute[] = [
     path: RoutePaths.SIGN_IN,
     exact: true,
     component: SignIn,
+    signedInRequired: false,
     data: {
       'title': 'Sign in'
     }
@@ -160,6 +175,7 @@ const routes: IRoute[] = [
     path: '',
     exact: false,
     component: NotFound,
+    signedInRequired: false,
     data: {
       title: 'Page not found :('
     }
