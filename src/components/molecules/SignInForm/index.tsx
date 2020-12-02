@@ -4,9 +4,10 @@ import AccessForm from '../AccessForm';
 import ISignInParams from '../../../__types__/ISignInParams';
 import { tryToSignIn } from '../../../axios/endpoints/auth';
 import Icon from '../../atoms/Icon';
-import { RoutePaths } from '../../../routes';
 import IInputFormProps from '../../../__types__/IInputFormProps';
 import ILocalStorageUserData from '../../../__types__/ILocalStorageUserData';
+import { RoutePaths } from '../../../routes';
+import { useHistory } from 'react-router-dom';
 
 const props: IInputFormProps[] = [
   { registerRules: { required: true } }, // username
@@ -16,6 +17,7 @@ const props: IInputFormProps[] = [
 const SignInForm = () => {
 
   const { setIsSigned } = useContext(IsUserLoggedContext);
+  const history = useHistory();
 
   const onSubmit = async (params: any) => {
     const result = await tryToSignIn(params as ISignInParams);
@@ -28,6 +30,7 @@ const SignInForm = () => {
       }
       localStorage.setItem('loggedUser', JSON.stringify(localStorageUserData));
       setIsSigned(() => true);
+      history.push(RoutePaths.ACCOUNT);
       console.log(`${result.username} has logged in!`);
     } else {
       console.log(result.message);
