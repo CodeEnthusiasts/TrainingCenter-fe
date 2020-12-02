@@ -7,9 +7,9 @@ import P from '../../atoms/P';
 import Icon from '../../atoms/Icon';
 
 
-const ProfileLink: FC<IProfileLink> = ({ content, iconClassName, path }) => 
+const ProfileLink: FC<IProfileLink> = ({ content, iconClassName, path, additionalFunction }) => 
 
-    <Link to={ path }>
+    <Link to={ path } onClick={ additionalFunction && additionalFunction }>
       <Button>
         <P>
           <Icon size={ 1.2 } className={ iconClassName } color={ theme.colors.secondary.color2 } />

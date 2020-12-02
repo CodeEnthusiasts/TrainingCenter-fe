@@ -22,7 +22,12 @@ export default function Profile() {
           <ProfileLink path={ RoutePaths.TRAININGS } iconClassName="fas fa-chart-line" />
           <ProfileLink path={ RoutePaths.SETTINGS } iconClassName="fas fa-cog" />
           <ProfileLink path={ RoutePaths.ACHIEVEMENTS } iconClassName="fas fa-award" />
-          <ProfileLink path={ RoutePaths.REGISTRATION } iconClassName="fas fa-door-open" content="log out" />
+          <ProfileLink 
+            path={ RoutePaths.REGISTRATION } 
+            iconClassName="fas fa-door-open" 
+            content="log out" 
+            additionalFunction={ () => { localStorage.removeItem('loggedUser') } }
+          />
       </ProfileWrapper>
     </MainTemplate>
   )
