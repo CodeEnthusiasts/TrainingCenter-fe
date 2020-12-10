@@ -29,7 +29,7 @@ const TrainingCard:FC<ITrainingCardProps> = ({name, duration, id}) => {
         </Link>
         <CardOptions>
           <H2>Start workout</H2>
-          <Link to={`/trainings/${id}/workout`}>
+          <Link to={`/trainings/${id}/workout/1`}>
             <Button play secondary radius={40} >
               <Icon className="fas fa-play" color={theme.colors.background.gradient.color1} size={1.5} />
             </Button>
