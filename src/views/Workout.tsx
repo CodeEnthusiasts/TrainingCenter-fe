@@ -5,12 +5,13 @@ import { RoutePaths } from '../routes';
 import { Data } from '../ExampleData';
 import styled from 'styled-components';
 import H1 from '../components/atoms/H1';
+import WorkoutMode from '../components/organisms/WorkoutMode';
 
 const WorkoutWrapper = styled.div`
   width: 100%;
   height: 100vh;
   position: relative;
-  padding: 100px 10px 10px;
+  padding: 100px 20px 10px;
   text-align: center;
 `;
 
@@ -27,7 +28,8 @@ export default function Workout() {
       />
       {
         currentTraining && currentTraining.exercises[parseInt(exerciseId) - 1] ?
-        <H1>{ currentTraining.exercises[parseInt(exerciseId) - 1].name }</H1>
+        // <H1>{ currentTraining.exercises[parseInt(exerciseId) - 1].name }</H1>
+        <WorkoutMode { ...currentTraining.exercises[parseInt(exerciseId) - 1] } />
         :
         <H1>Exercise does not exist</H1>
       }
