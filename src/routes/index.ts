@@ -15,6 +15,7 @@ import TrainingNotes from '../views/TrainingNotes'
 import TrainingHistory from '../views/TrainingHistory';
 import ExerciseFinder from '../views/ExerciseFinder';
 import SignIn from '../views/SignIn';
+import Workout from '../views/Workout';
 
 export enum RoutePaths {
   HOME = '/',
@@ -33,6 +34,7 @@ export enum RoutePaths {
   SETTINGS = '/settings', 
   STATISTICS = '/statistics',
   SIGN_IN = '/sign-in',
+  WORKOUT = '/trainings/:trainingId/workout/:exerciseId',
 }
 
 const routes: IRoute[] = [
@@ -169,6 +171,15 @@ const routes: IRoute[] = [
     signedInRequired: false,
     data: {
       'title': 'Sign in'
+    }
+  },
+  {
+    path: RoutePaths.WORKOUT,
+    exact: true,
+    component: Workout,
+    signedInRequired: false,
+    data: {
+      'title': 'Workout'
     }
   },
   {
