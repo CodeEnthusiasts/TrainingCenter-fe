@@ -25,16 +25,18 @@ const WorkoutMode: FC<IExercise> = ({ img, name }) => {
       </FirstContainer>
       <TableContainer>
         <Table>
-          <tr>
-            <th>Sets</th>
-            <th>Reps</th>
-            <th>Reps?</th>
-            <th>Weight</th>
-          </tr>
-          {
-            exampleRepsSetup.map((reps, i) => 
-              <WorkoutTableRow sets={ i + 1 } reps={ reps } key={ i } />)
-          }
+          <tbody>
+            <tr>
+              <th>Sets</th>
+              <th>Reps</th>
+              <th>Reps?</th>
+              <th>Weight</th>
+            </tr>
+            {
+              exampleRepsSetup.map((reps, i) => 
+                <WorkoutTableRow sets={ i + 1 } reps={ reps } key={ i } />)
+            }
+          </tbody>
         </Table>
       </TableContainer>
     </Container>
