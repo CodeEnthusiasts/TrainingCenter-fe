@@ -8,7 +8,7 @@ export const Container = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+
   align-items: center;
 `;
 
@@ -42,13 +42,20 @@ export const Button = styled(ButtonWrapper)`
   margin: 0 4px;
 `;
 
-export const TableContainer = styled.div`
+export const Test = styled.div`
+  position: relative;
+  max-width: 350px;
+  height: 350px;
+  min-width: 280px;
   flex: 1;
+`;
+
+export const TableContainer = styled.div`
+  height: 100%;
+  padding: 5px 0;
   position: relative;
   width: 100%;
-  overflow-y: auto;
-  max-width: 350px;
-  min-width: 280px;
+  overflow-y: scroll;
 `;
 
 export const Table = styled.table`
