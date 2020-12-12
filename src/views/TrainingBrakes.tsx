@@ -1,16 +1,24 @@
 import React from 'react'
-import TrainingDetailsTemplate from '../templates/TrainingDetailsTemplate'
-import MainTemplate from '../templates/MainTemplate'
-import { RoutePaths } from '../routes'
-import { useParams } from 'react-router-dom';
-import { TrainingBrakesContainer } from './styles/TrainingBrakesStyle';
-import { theme } from '../theme/mainTheme';
-import H1 from '../components/atoms/H1'
 import P from '../components/atoms/P'
+import H1 from '../components/atoms/H1'
+import MainTemplate from '../templates/MainTemplate'
+import TrainingDetailsTemplate from '../templates/TrainingDetailsTemplate'
+import { theme } from '../theme/mainTheme';
+import { RoutePaths } from '../routes'
+import { useParams, useHistory } from 'react-router-dom';
+import { TrainingBrakesContainer } from './styles/TrainingBrakesStyle';
+
+
 const TrainingBrakes = () => {
   const { trainingId } = useParams<{ trainingId: string}>();
+  const history = useHistory();
+  
   return (
-    <MainTemplate routePath={RoutePaths.TRAINING_BRAKES} buttons={{leftBtn: "Back", rightBtn: "Edit"}}>
+    <MainTemplate 
+    routePath={RoutePaths.TRAINING_BRAKES} 
+    buttons={{leftBtn: "Back", rightBtn: "Edit"}}
+    actions={{ leftBtnAction: history.goBack }} 
+    >
       <TrainingDetailsTemplate trainingId={trainingId}>
         <TrainingBrakesContainer>
           <H1>Brakes between exercises</H1>

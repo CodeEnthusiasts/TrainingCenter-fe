@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import ProfileLink from '../components/molecules/ProfileLink';
-import { RoutePaths } from '../routes';
 import MainTemplate from '../templates/MainTemplate';
-
+import { RoutePaths } from '../routes';
+import { useHistory } from 'react-router-dom';
 
 const ProfileWrapper = styled.div` 
   padding-top: 80px;  
@@ -14,8 +14,13 @@ const ProfileWrapper = styled.div`
 `;
 
 export default function Profile() { 
+  const history = useHistory();
   return (
-    <MainTemplate routePath={ RoutePaths.PROFILE } buttons={{leftBtn: 'Back', rightBtn: ''}}>
+    <MainTemplate 
+      routePath={ RoutePaths.PROFILE } 
+      buttons={{leftBtn: 'Back', rightBtn: ''}}
+      actions={{ leftBtnAction: history.goBack }}
+      >
       <ProfileWrapper>
           <ProfileLink path={ RoutePaths.EDIT_ACCOUNT } iconClassName="fas fa-user" />
           <ProfileLink path={ RoutePaths.STATISTICS } iconClassName="fas fa-chart-bar" />

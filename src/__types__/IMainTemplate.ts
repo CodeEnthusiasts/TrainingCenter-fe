@@ -6,4 +6,12 @@ export default interface MainTemplate {
   children: ReactNode,
   routePath: RoutePaths,
   buttons: IHeaderNavigation['buttons'],
+  actions?: {
+    leftBtnAction?:  (() => void) | undefined;
+    rightBtnAction?:  (() => void) | undefined;
+  },
+  links?: {
+    leftBtnLink?: string | undefined;
+    rightBtnLink?: string | undefined;
+  }
 }

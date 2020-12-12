@@ -1,18 +1,19 @@
 import React from 'react'
-import TrainingDetailsTemplate from '../templates/TrainingDetailsTemplate'
-import MainTemplate from '../templates/MainTemplate'
-import { RoutePaths } from '../routes'
-import { useParams } from 'react-router-dom';
-import H1 from '../components/atoms/H1'
 import P from '../components/atoms/P'
+import H1 from '../components/atoms/H1'
 import Exercise from '../components/molecules/Exercise'
+import MainTemplate from '../templates/MainTemplate'
+import TrainingDetailsTemplate from '../templates/TrainingDetailsTemplate'
 import {Data} from '../ExampleData';
+import { RoutePaths } from '../routes'
+import { useParams, useHistory } from 'react-router-dom';
 import { ExercisesHeader, ExercisesContainer } from './styles/TrainingExercisesStyle';
 
 const TrainingExercises = () => {
   const { trainingId } = useParams<{ trainingId: string}>();
   const { UserTrainings } = Data;
-
+  const history = useHistory();
+  
   const getTrainingExercises = () => {
     const Data = UserTrainings.filter((element) => {
       return element.id === trainingId;
@@ -20,9 +21,12 @@ const TrainingExercises = () => {
     return Data[0].exercises;
   }
 
-  console.log();
   return (
-    <MainTemplate routePath={RoutePaths.TRAINING_EXERCISES} buttons={{leftBtn: "Back", rightBtn: "Edit"}}>
+    <MainTemplate 
+    routePath={RoutePaths.TRAINING_EXERCISES} 
+    buttons={{leftBtn: "Back", rightBtn: "Edit"}}
+    actions={{leftBtnAction: history.goBack }} 
+    >
       <TrainingDetailsTemplate trainingId={trainingId}>
         <ExercisesHeader >
           <H1>Exercises</H1>

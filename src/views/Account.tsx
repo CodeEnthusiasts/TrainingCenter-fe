@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import AccountTile from '../components/molecules/AccountTile';
-import { Data } from '../ExampleData';
-import H1Proto from '../components/atoms/H1';
-import ProfileImage from '../components/atoms/ProfileImage';
 import styled from 'styled-components';
-import { RoutePaths } from '../routes';
+import H1Proto from '../components/atoms/H1';
+import AccountTile from '../components/molecules/AccountTile';
+import ProfileImage from '../components/atoms/ProfileImage';
 import MainTemplate from '../templates/MainTemplate';
+import { Data } from '../ExampleData';
 import { Users } from '../axios/endpoints/user';
+import { RoutePaths } from '../routes';
+import { useHistory } from 'react-router-dom';
+
 
 const icons = [ // assuming that data will be passed in this order
   'fas fa-weight-hanging',
@@ -48,7 +50,7 @@ const TilesWrapper = styled.div`
 `;
 
 export default function Account() {
-  
+  const history = useHistory();
   const { profileImage, ...details } = Data.UserDetailsAccount;
   // this username stuff is for testing purposes
   const [username, setUsername] = useState<string>('loading');
@@ -61,7 +63,11 @@ export default function Account() {
   }, [])
 
   return (
-    <MainTemplate routePath={ RoutePaths.ACCOUNT } buttons={{ leftBtn: 'Back', rightBtn: 'Menu'}}>
+    <MainTemplate
+      routePath={ RoutePaths.ACCOUNT }
+      buttons={{ leftBtn: 'Back', rightBtn: 'Menu'}}
+      actions={{ leftBtnAction: history.goBack }}
+    >
       <AccountWrapper>
         <ProfileImage src={ profileImage } alt="" size="150px" />
         <H1>{ username }</H1>

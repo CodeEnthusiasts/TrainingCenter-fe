@@ -14,8 +14,6 @@ const SignInWrapper = styled.div`
 `;
 
 export default function SignIn() {
-  
-
   return (
     <SignInWrapper>
       <Logo />
