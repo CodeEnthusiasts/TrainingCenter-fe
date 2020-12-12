@@ -3,26 +3,40 @@ import SearchBox from '../components/atoms/SearchBox';
 import MainTemplate from '../templates/MainTemplate'
 import ExerciseCard from '../components/molecules/ExerciseCard';
 import { Data } from '../ExampleData'
-import { RoutePaths } from '../routes'
 import { IExercise } from '../__types__/IExercise'
+import { RoutePaths } from '../routes'
+import { useHistory } from 'react-router-dom';
 import { FinderContainer, ExercisesContainer } from './styles/ExerciseFinderStyle'
+import FiltersModal from '../components/organisms/FiltersModal';
+
 
 const ExerciseFinder = () => {
-  const [SearchValue, setSearchValue ] = useState<string>('');
+  const [ SearchValue, setSearchValue ] = useState<string>('');
   const [ exercises, setExercises ] = useState<IExercise[]>([])
-
+  const [ isFiltersModalOpen, setFiltersModal] = useState<boolean>(false);
+  const history = useHistory();
+  
   useEffect(()=> {
     Data.Exercises.map(e => { 
       setExercises(exercises => [...exercises, e]);
     })
   }, [])
   
+  const ToggleFiltersModal = ():void => { 
+    setFiltersModal(!isFiltersModalOpen);
+  }
   const filtredExercises = exercises.filter(e => {
     return e.name.toLowerCase().includes(SearchValue.toLowerCase())
   })  
 
   return (
-    <MainTemplate routePath={RoutePaths.EXERCISE_FINDER} buttons={{leftBtn: "Back", rightBtn: "Edit"}}>
+    <MainTemplate 
+     routePath={RoutePaths.EXERCISE_FINDER}
+     buttons={{leftBtn: "Back", rightBtn: "Filters" }} 
+     actions={{rightBtnAction: ToggleFiltersModal, leftBtnAction: history.goBack }} 
+     >
+      { isFiltersModalOpen && <FiltersModal/> }
+  
       <FinderContainer> 
           <SearchBox  
             valueSetter={setSearchValue} 
