@@ -15,6 +15,7 @@ import TrainingNotes from '../views/TrainingNotes'
 import TrainingHistory from '../views/TrainingHistory';
 import ExerciseFinder from '../views/ExerciseFinder';
 import SignIn from '../views/SignIn';
+import Workout from '../views/Workout';
 
 export enum RoutePaths {
   HOME = '/',
@@ -30,9 +31,10 @@ export enum RoutePaths {
   PROFILE = '/profile',
   REGISTRATION = '/registration',
   ACHIEVEMENTS = '/achievements',
-  SETTINGS = '/settings', 
+  SETTINGS = '/settings',
   STATISTICS = '/statistics',
   SIGN_IN = '/sign-in',
+  WORKOUT = '/trainings/:trainingId/workout/:exerciseId',
 }
 
 const routes: IRoute[] = [
@@ -120,7 +122,7 @@ const routes: IRoute[] = [
   {
     path: RoutePaths.PROFILE,
     exact: true,
-    component: Profile,    
+    component: Profile,
     signedInRequired: true,
     data: {
       'title': 'Profile',
@@ -172,6 +174,15 @@ const routes: IRoute[] = [
     }
   },
   {
+    path: RoutePaths.WORKOUT,
+    exact: true,
+    component: Workout,
+    signedInRequired: false,
+    data: {
+      'title': 'Workout'
+    }
+  },
+  {
     path: '',
     exact: false,
     component: NotFound,
@@ -180,7 +191,7 @@ const routes: IRoute[] = [
       title: 'Page not found :('
     }
   },
-  
+
 ];
 
 export default routes;

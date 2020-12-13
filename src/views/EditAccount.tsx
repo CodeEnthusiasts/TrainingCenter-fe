@@ -5,6 +5,7 @@ import ChangePhotoButton from '../components/molecules/ChangePhotoButton';
 import { Data } from '../ExampleData';
 import { theme } from '../theme/mainTheme';
 import styled from 'styled-components';
+import HeaderNavigation from '../components/organisms/HeaderNavigation';
 import { RoutePaths } from '../routes';
 
 const EditAccountWrapper = styled.div`
@@ -14,7 +15,7 @@ const EditAccountWrapper = styled.div`
   align-items: center;
   flex-direction: column;
   text-align: center;
-  padding-top: 80px;
+  padding-top: 100px;
 `;
 
 export default function EditAccount() {
@@ -22,6 +23,11 @@ export default function EditAccount() {
   const { profileImage, ...details }  = Data.UserDetailsEditAccount;
 
   return (
+    <>
+    <HeaderNavigation  
+      title={ RoutePaths.EDIT_ACCOUNT }
+      buttons={{ leftBtn: 'Back', rightBtn: 'Confirm' }}
+    />
     <EditAccountWrapper>
       <ChangePhotoButton />
       <H2 style={{ color: theme.colors.secondary.color2 }}>
@@ -35,5 +41,6 @@ export default function EditAccount() {
           />
       )}
     </EditAccountWrapper>
+    </>
   )
 }
