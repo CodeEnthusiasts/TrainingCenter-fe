@@ -9,12 +9,12 @@ import {
 } from './style'
 
 
-const RadioButton:FC<IRadioButton> = ({id, name, ref, label, labelDetails}) => {
+const RadioButton:FC<IRadioButton> = ({id, name, register, label, labelDetails}) => {
   return (
     <RadioWrapper htmlFor={id}>
       <RadioInput 
         id={id} 
-        ref={ref}
+        ref={register}
         type="radio" 
         name={name} 
         value={id} 

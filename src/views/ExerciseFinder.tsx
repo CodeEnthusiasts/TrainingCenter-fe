@@ -35,7 +35,7 @@ const ExerciseFinder = () => {
      buttons={{leftBtn: "Back", rightBtn: "Filters" }} 
      actions={{rightBtnAction: ToggleFiltersModal, leftBtnAction: history.goBack }} 
      >
-      { isFiltersModalOpen && <FiltersModal/> }
+      { isFiltersModalOpen && <FiltersModal ToggleFiltersModal={ToggleFiltersModal}/> }
   
       <FinderContainer> 
           <SearchBox  

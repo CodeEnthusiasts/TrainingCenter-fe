@@ -3,21 +3,19 @@ import P from '../../atoms/P';
 import Icon from '../../atoms/Icon';
 import RadioButton from './../../atoms/RadioButton';
 import { theme } from '../../../theme/mainTheme';
-import { useForm } from 'react-hook-form';
 import { IFilterBookmark } from './../../../__types__/IFilterBookmark';
 import { 
   BookmarkWrapper, 
   BookmarkItems, 
 }  from './style'
 
-const FilterBookmark:FC<IFilterBookmark> = ({label, items}) => {
-  const { register } = useForm();
+const FilterBookmark:FC<IFilterBookmark> = ({label, items, register, watch}) => {
   const [ isBookMarkExpanded, setBookMarkExpansion ] = useState<boolean>(false);
 
   const ToggleBookMark = (): void => {
     setBookMarkExpansion(!isBookMarkExpanded)
   };
-
+  // console.log(watch("Muscles"));
   return (
     <>
       <BookmarkWrapper isBookMarkExpanded={isBookMarkExpanded} onClick = {() => ToggleBookMark()}>
@@ -30,8 +28,14 @@ const FilterBookmark:FC<IFilterBookmark> = ({label, items}) => {
           </P>
       </BookmarkWrapper>
       { isBookMarkExpanded && <BookmarkItems>
-        {items.map(item => {
-          return <RadioButton id={item} name={label} label={item.charAt(0).toUpperCase() + item.slice(1)} ref={register}/>
+        {items.map((item, idx) => {
+          return <RadioButton 
+            id={item} 
+            key={`${item}_${idx}`} 
+            name={label} 
+            label={item.charAt(0).toUpperCase() + item.slice(1)} 
+            register={register}
+          />
         })}
       </BookmarkItems>} 
     </>

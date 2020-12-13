@@ -1,7 +1,7 @@
 export interface IRadioButton {
   id: string,
   name: string,
-  ref: () => void;
+  register: () => void;
   label: string,
   labelDetails?: string
 }
