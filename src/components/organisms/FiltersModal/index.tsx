@@ -6,19 +6,16 @@ import FormButton from '../../atoms/FormButton'
 import RadioButton from '../../atoms/RadioButton'
 import FilterBookmark from './../../molecules/FilterBookmark/index';
 import { theme } from '../../../theme/mainTheme'
-import { SubmitHandler, useForm } from 'react-hook-form'
+import { IFIltersModal } from '../../../__types__/IFiltersModal'
 import { SortingOptions } from './sortingOptions'
 import { filterBookmarks } from './filterBookmarks'
+import { SubmitHandler, useForm } from 'react-hook-form'
 import { 
   RadioForm,
   ModalHeader, 
   ModalWrapper,
   FiltersButtons,
 } from './style'
-
-interface IFIltersModal {
-  ToggleFiltersModal: () => void;
-}
 
 type Inputs = {
   sortValues?: string,
@@ -66,7 +63,6 @@ const FiltersModal:FC<IFIltersModal> = ({ToggleFiltersModal}): JSX.Element => {
             />
           })}
           <FiltersButtons>
-
             <FormButton onClick={() => console.log('clear')}>
               Clear
             </FormButton>
