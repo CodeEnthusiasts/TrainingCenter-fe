@@ -24,8 +24,7 @@ function Root() {
           <Switch>
             { routes.map(({ component, signedInRequired, ...route }, i) =>
               <Route { ...route }
-                     // component={ (isLogged || !signedInRequired) ? component : NotFound }
-                     component={ component }
+                     component={ (isLogged || !signedInRequired) ? component : NotFound }
                      key={ i }
               />)
             }
