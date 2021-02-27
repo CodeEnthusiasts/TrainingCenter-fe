@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
-import { Breaker, Container, Dash, Setter, Time, TimeContainer, TimerContainer, UpdateTimeButton } from './styles';
+import { Breaker, Container, Dash, Setter, Time, TimeContainer, TimerContainer, UpdateTimeButton } from './TimerStyle';
 import Icon from '../../atoms/Icon/Icon';
-import { theme } from '../../../theme/mainTheme';
+import { theme } from '../../../theme/MainTheme';
 
 interface ITimer {
   breakTime: number,

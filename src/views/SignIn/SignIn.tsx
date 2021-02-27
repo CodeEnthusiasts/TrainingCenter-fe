@@ -1,17 +1,8 @@
-import React from 'react'
-import styled from 'styled-components';
-import SignInForm from '../../components/molecules/SignInForm';
-import Logo from '../../components/molecules/Logo';
+import React from 'react';
+import SignInForm from '../../components/molecules/SignInForm/SignInForm';
+import Logo from '../../components/molecules/Logo/Logo';
+import { SignInWrapper } from './SignInStyle'
 
-const SignInWrapper = styled.div`
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 50px;
-`;
 
 export default function SignIn() {
   return (

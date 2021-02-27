@@ -1,7 +1,7 @@
 import React, { FC, ReactNode } from 'react';
 import Navigation from '../../components/organisms/Navigation/Navigation';
 import HeaderNavigation, { IHeaderNavigation } from '../../components/organisms/HeaderNavigation/HeaderNavigation';
-import { Container } from './style';
+import { Container } from './MainTemplateStyle';
 import { RoutePaths } from '../../routes/routes';
 
 interface IMainTemplate {

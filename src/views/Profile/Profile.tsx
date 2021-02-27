@@ -1,17 +1,10 @@
 import React from 'react';
-import styled from 'styled-components';
-import ProfileLink from '../components/molecules/ProfileLink';
-import MainTemplate from '../templates/MainTemplate';
-import { RoutePaths } from '../routes';
+import ProfileLink from '../../components/molecules/ProfileLink/ProfileLink';
+import MainTemplate from '../../templates/MainTemplate/MainTemplate';
+import { RoutePaths } from '../../routes/routes';
 import { useHistory } from 'react-router-dom';
+import {ProfileWrapper} from './ProfileStyle'
 
-const ProfileWrapper = styled.div` 
-  padding-top: 80px;  
-  width: 350px;
-  height: 500px;
-  margin: 0 auto;
-  text-align: center;
-`;
 
 export default function Profile() {
   const history = useHistory();

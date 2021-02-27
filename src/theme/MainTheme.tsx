@@ -1,4 +1,4 @@
-import { colors } from './themeValues'
+import { colors } from './ThemeValues'
 import { ITheme } from './__types__/ITheme';
 
 export const theme: ITheme = {

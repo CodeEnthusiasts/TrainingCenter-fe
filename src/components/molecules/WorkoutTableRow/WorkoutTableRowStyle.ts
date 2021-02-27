@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { ButtonWrapper } from '../../atoms/Button/styles';
+import { ButtonWrapper } from '../../atoms/Button/ButtonStyle';
 
 export const Tr = styled.tr`;
   margin: 5px 0;

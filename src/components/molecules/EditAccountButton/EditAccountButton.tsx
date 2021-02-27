@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import Button from '../UniversalAccountButton';
-import { Div, Span } from './styles';
+import Button from '../UniversalAccountButton/UniversalAccountButton';
+import { Div, Span } from './EditAccountButtonStyle';
 
 interface IEditAccountButton {
   detail: string,

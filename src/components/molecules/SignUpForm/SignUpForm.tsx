@@ -2,8 +2,8 @@ import React, { ChangeEvent, useState } from 'react';
 import AccessForm, { IInputFormProps } from '../AccessForm/AccessForm';
 import { ISignUpParams, tryToSignUp } from '../../../axios/endpoints/auth';
 import Icon from '../../atoms/Icon/Icon';
-import { RoutePaths } from '../../../routes';
-import { emailPattern, noSpacesPattern } from '../../../regex';
+import { RoutePaths } from '../../../routes/routes';
+import { emailPattern, noSpacesPattern } from '../../../regex/regex';
 
 const SignUpForm = () => {
 

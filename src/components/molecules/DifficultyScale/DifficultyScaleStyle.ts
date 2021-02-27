@@ -1,4 +1,4 @@
-import { theme } from './../../../theme/mainTheme';
+import { theme } from '../../../theme/MainTheme';
 import styled, { css } from 'styled-components'
 
 const DefaultCircleRadius = 15;

@@ -1,6 +1,6 @@
 import React, { FC } from "react";
-import { SearchField, StyledIcon, StyledInput } from './style'
-import { theme } from '../../../theme/mainTheme'
+import { SearchField, StyledIcon, StyledInput } from './SearchBoxStyle'
+import { theme } from '../../../theme/MainTheme'
 
 interface ISearchBox {
   placeholder: string,

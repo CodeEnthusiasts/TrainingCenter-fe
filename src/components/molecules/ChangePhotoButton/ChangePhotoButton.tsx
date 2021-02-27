@@ -1,9 +1,9 @@
 import React from 'react';
 import ProfileImage from '../../atoms/ProfileImage/ProfileImage';
-import userImg from '../../../exampleImg.jpg';
-import { Button, Div } from './styles';
+import userImg from '../../../assets/img/exampleImg.jpg';
+import { Button, Div } from './ChangePhotoButtonStyle';
 import Icon from '../../atoms/Icon/Icon';
-import { theme } from '../../../theme/mainTheme';
+import { theme } from '../../../theme/MainTheme';
 
 const ChangePhotoButton = () => {
   return (

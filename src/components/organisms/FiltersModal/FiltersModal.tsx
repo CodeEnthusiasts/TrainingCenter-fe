@@ -5,16 +5,16 @@ import Button from '../../atoms/Button/Button'
 import FormButton from '../../atoms/FormButton/FormButton'
 import RadioButton from '../../atoms/RadioButton/RadioButton'
 import FilterBookmark from '../../molecules/FilterBookmark/FilterBookmark';
-import { theme } from '../../../theme/mainTheme'
-import { SortingOptions } from './sortingOptions'
-import { filterBookmarks } from './filterBookmarks'
+import { theme } from '../../../theme/MainTheme'
+import { SortingOptions } from './SortingOptions'
+import { filterBookmarks } from './FilterBookmarks'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { 
   RadioForm,
   ModalHeader, 
   ModalWrapper,
   FiltersButtons,
-} from './style'
+} from './FiltersModalStyle'
 
 type Inputs = {
   sortValues?: string,

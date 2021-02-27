@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { theme } from '../../../theme/mainTheme';
+import { theme } from '../../../theme/MainTheme';
 
 const DefaultButtonRadius = 60;
 const primmary1 = theme.colors.button.primmary.color1;

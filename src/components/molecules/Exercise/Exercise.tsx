@@ -3,8 +3,8 @@ import Button from '../../atoms/Button/Button'
 import Icon from '../../atoms/Icon/Icon'
 import Paragraph from '../../atoms/Paragraph/Paragraph'
 import Link from '../../atoms/Link/Link'
-import { theme } from '../../../theme/mainTheme';
-import { ExerciseContainer, ExerciseDescription, ExerciseImage, Separator } from './style'
+import { theme } from '../../../theme/MainTheme';
+import { ExerciseContainer, ExerciseDescription, ExerciseImage, Separator } from './ExerciseStyle'
 
 export interface IMuscle {
   name: string

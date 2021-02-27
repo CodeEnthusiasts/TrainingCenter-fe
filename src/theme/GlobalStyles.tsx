@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { theme } from './mainTheme';
+import { theme } from './MainTheme';
 
 const GlobalTheme = {
   textColor: '#ffffff',

@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import Paragraph from '../../atoms/Paragraph/Paragraph'
-import { Div, H2, Span } from './styles';
-import { theme } from '../../../theme/mainTheme';
+import { Div, H2, Span } from './TrainingNoteStyle';
+import { theme } from '../../../theme/MainTheme';
 
 interface ITrainingNote {
   title: string,

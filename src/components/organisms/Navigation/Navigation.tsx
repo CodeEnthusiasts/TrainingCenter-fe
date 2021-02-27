@@ -1,12 +1,12 @@
 import React from 'react';
-import { RoutePaths } from '../../../routes';
+import { RoutePaths } from '../../../routes/routes';
 import ProfileImage from '../../atoms/ProfileImage/ProfileImage';
-import ProfileImageSrc from '../../../exampleImg.jpg';
+import ProfileImageSrc from '../../../assets/img/exampleImg.jpg';
 import NavButton from '../../molecules/NavigationButton/NavigationButton';
 import Icon from '../../atoms/Icon/Icon';
-import { Nav } from './styles';
+import { Nav } from './NavigationStyle';
 import { useLocation } from 'react-router-dom';
-import { theme } from '../../../theme/mainTheme';
+import { theme } from '../../../theme/MainTheme';
 
 export default function Navigation() {
   const { pathname } = useLocation();

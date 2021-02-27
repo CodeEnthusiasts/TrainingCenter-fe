@@ -1,4 +1,4 @@
-import { theme } from './../../../theme/mainTheme';
+import { theme } from '../../../theme/MainTheme';
 import { Link as LinkProp } from 'react-router-dom'
 import styled, { css } from 'styled-components'
 

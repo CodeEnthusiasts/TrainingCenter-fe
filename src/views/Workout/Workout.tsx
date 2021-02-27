@@ -1,19 +1,12 @@
 import React from 'react';
-import H1 from '../../components/atoms/H1';
-import styled from 'styled-components';
-import WorkoutMode from '../../components/organisms/WorkoutMode';
-import HeaderNavigation from '../../components/organisms/HeaderNavigation';
+import H1 from '../../components/atoms/H1/H1';
+import { WorkoutWrapper } from './WorkoutStyle'
+import WorkoutMode from '../../components/organisms/WorkoutMode/WorkoutMode';
+import HeaderNavigation from '../../components/organisms/HeaderNavigation/HeaderNavigation';
 import { Data } from '../../ExampleData';
 import { useHistory, useParams } from 'react-router-dom';
-import { RoutePaths } from '../../routes';
+import { RoutePaths } from '../../routes/routes';
 
-const WorkoutWrapper = styled.div`
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  padding: 100px 20px 0px;
-  text-align: center;
-`;
 
 export default function Workout() {
   const history = useHistory();

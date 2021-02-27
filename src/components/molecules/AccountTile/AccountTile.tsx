@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import Paragraph from '../../atoms/Paragraph/Paragraph';
 import Icon from '../../atoms/Icon/Icon';
-import { theme } from '../../../theme/mainTheme';
-import { Hr, Tile } from './styles';
+import { theme } from '../../../theme/MainTheme';
+import { Hr, Tile } from './AccountTileStyle';
 
 interface IAccountTile {
   iconClassName: string,

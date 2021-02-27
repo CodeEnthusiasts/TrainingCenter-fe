@@ -1,12 +1,12 @@
 import React from 'react'
-import TrainingDetailsTemplate from '../../templates/TrainingDetailsTemplate'
-import MainTemplate from '../../templates/MainTemplate'
-import TrainingNote from '../../components/molecules/TrainingNote';
+import TrainingDetailsTemplate from '../../templates/TrainingDetailsTemplate/TrainingDetailsTemplate'
+import MainTemplate from '../../templates/MainTemplate/MainTemplate'
+import TrainingNote from '../../components/molecules/TrainingNote/TrainingNote';
 import { Data } from '../../ExampleData';
-import { RoutePaths } from '../../routes'
+import { RoutePaths } from '../../routes/routes'
 import { useHistory, useParams } from 'react-router-dom';
-import H2 from '../../components/atoms/H2';
-import { TrainingNotesWrapper } from '../styles/TrainingNotesStyle';
+import H2 from '../../components/atoms/H2/H2';
+import { TrainingNotesWrapper } from './getTrainingNotesStyle';
 
 const getTrainingNotes = (trainingId: string) => {
 

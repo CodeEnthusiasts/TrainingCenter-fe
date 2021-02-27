@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { TailsWrapper } from './style'
+import { TailsWrapper } from './TrainingDetailsTemplateStyle'
 import TrainingDetailsTile from '../../components/molecules/TrainingDetailsTile/TrainingDetailsTile'
 
 interface ITrainingDetailsTemplate {

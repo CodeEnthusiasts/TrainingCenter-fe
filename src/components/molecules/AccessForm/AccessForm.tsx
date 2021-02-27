@@ -1,8 +1,8 @@
 import React, { FC, ReactElement } from 'react';
-import AccessFormLink from '../AccessFormLink';
+import AccessFormLink from '../AccessFormLink/AccessFormLink';
 import { useForm, ValidationRules } from 'react-hook-form';
-import { Form, ValidationError } from './styles';
-import { RoutePaths } from '../../../routes';
+import { Form, ValidationError } from './AccessFormStyle';
+import { RoutePaths } from '../../../routes/routes';
 
 interface IAccessForm {
   children: ReactElement[],

@@ -1,7 +1,7 @@
 import React, {FC} from 'react'
-import { TailWrapper, LightShadow, Link} from './style'
+import { TailWrapper, LightShadow, Link} from './TrainingDetailsTileStyle'
 import Icon from '../../atoms/Icon/Icon'
-import { theme } from '../../../theme/mainTheme'
+import { theme } from '../../../theme/MainTheme'
 import { useLocation } from 'react-router-dom';
 import { useHistory } from 'react-router-dom'
 

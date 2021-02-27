@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { ButtonWrapper } from './styles'
+import { ButtonWrapper } from './ButtonStyle'
 
 interface IButton {
   children: React.ReactNode

@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import Icon from '../Icon/Icon'
-import { InfoBtnWrapper } from './style'
+import { InfoBtnWrapper } from './InfoButtonStyle'
 
 interface IInfoButton {
   children?: React.ReactNode;

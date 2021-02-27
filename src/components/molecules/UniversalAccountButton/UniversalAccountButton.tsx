@@ -1,7 +1,7 @@
 import React, { FC, ReactNode } from 'react';
 import Icon from '../../atoms/Icon/Icon';
-import { theme } from '../../../theme/mainTheme';
-import { Button } from './styles';
+import { theme } from '../../../theme/MainTheme';
+import { Button } from './UniversalAccountButtonStyle';
 
 const UniversalAccountButton: FC<{ children: ReactNode }> = ({ children }) =>
   <Button>

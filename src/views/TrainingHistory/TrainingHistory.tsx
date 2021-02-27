@@ -1,6 +1,6 @@
 import React from 'react'
-import MainTemplate from '../../templates/MainTemplate'
-import { RoutePaths } from '../../routes'
+import MainTemplate from '../../templates/MainTemplate/MainTemplate'
+import { RoutePaths } from '../../routes/routes'
 import { useHistory } from 'react-router-dom';
 
 const TrainingHistory = () => {

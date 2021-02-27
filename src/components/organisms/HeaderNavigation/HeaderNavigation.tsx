@@ -2,9 +2,9 @@ import React, {FC} from 'react'
 import H1 from '../../atoms/H1/H1'
 import Button from '../../atoms/Button/Button'
 import Icon from '../../atoms/Icon/Icon'
-import Routes from '../../../routes/'
-import { theme } from '../../../theme/mainTheme'
-import { HeaderWrapper, HeaderLink} from './styles'
+import Routes from '../../../routes/routes'
+import { theme } from '../../../theme/MainTheme'
+import { HeaderWrapper, HeaderLink} from './HeaderNavigationStyle'
 import { HeaderButtons } from './HeaderButtons'
 
 const getRouteData = (path:string) => {

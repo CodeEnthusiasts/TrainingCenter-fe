@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react';
-import { Container, Dot, DotsContainer, Img, SwitchImageButton } from './styles';
+import { Container, Dot, DotsContainer, Img, SwitchImageButton } from './ImageSliderStyle';
 import Icon from '../../atoms/Icon/Icon';
-import { theme } from '../../../theme/mainTheme';
+import { theme } from '../../../theme/MainTheme';
 
 const ImageSlider: FC<{ images: string[], }> = ({ images }) => {
 

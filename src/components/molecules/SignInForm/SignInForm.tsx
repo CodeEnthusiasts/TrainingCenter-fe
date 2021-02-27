@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import { IsUserLoggedContext } from '../../../contexts/signedUser';
+import { IsUserLoggedContext } from '../../../contexts/SignedUser';
 import AccessForm, { IInputFormProps } from '../AccessForm/AccessForm';
 import { ISignInParams, tryToSignIn } from '../../../axios/endpoints/auth';
 import Icon from '../../atoms/Icon/Icon';
-import { RoutePaths } from '../../../routes';
+import { RoutePaths } from '../../../routes/routes';
 import { useHistory } from 'react-router-dom';
 
 interface ILocalStorageUserData {

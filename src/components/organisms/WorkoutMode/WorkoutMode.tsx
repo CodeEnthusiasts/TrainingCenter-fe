@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react';
-import { Container, FirstContainer, H2, Button, Table, TableContainer, Test } from './styles';
+import { Container, FirstContainer, H2, Button, Table, TableContainer, Test } from './WorkoutModeStyle';
 import ImageSlider from '../../molecules/ImageSlider/ImageSlider';
-import { theme } from '../../../theme/mainTheme';
+import { theme } from '../../../theme/MainTheme';
 import WorkoutTableRow from '../../molecules/WorkoutTableRow/WorkoutTableRow';
 import Icon from '../../atoms/Icon/Icon';
 import Timer from '../../molecules/Timer/Timer';

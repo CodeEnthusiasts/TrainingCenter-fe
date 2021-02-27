@@ -2,8 +2,8 @@ import React, { FC, useState } from 'react'
 import Paragraph from '../../atoms/Paragraph/Paragraph';
 import Icon from '../../atoms/Icon/Icon';
 import RadioButton from '../../atoms/RadioButton/RadioButton';
-import { theme } from '../../../theme/mainTheme';
-import { BookmarkItems, BookmarkWrapper, } from './style'
+import { theme } from '../../../theme/MainTheme';
+import { BookmarkItems, BookmarkWrapper, } from './FilterBookmarkStyle'
 
 interface IFilterBookmark {
   label: string,

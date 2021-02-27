@@ -1,5 +1,5 @@
 import { Link as LinkProp } from 'react-router-dom'
-import { theme } from './../../../theme/mainTheme';
+import { theme } from '../../../theme/MainTheme';
 import styled from 'styled-components';
 
 const ActiveColor1 = theme.colors.button.secondary.color1;

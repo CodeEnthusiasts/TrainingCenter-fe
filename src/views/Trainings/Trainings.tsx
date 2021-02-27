@@ -1,23 +1,12 @@
 import React from 'react';
-import styled from 'styled-components'
-import MainTemplate from '../../templates/MainTemplate'
+import { TrainingsWrapper } from './TrainingsStyle'
+import MainTemplate from '../../templates/MainTemplate/MainTemplate'
 import TrainingCard from '../../components/molecules/TrainingCard/TrainingCard'
 import { Data } from '../../ExampleData'
-import { RoutePaths } from '../../routes'
+import { RoutePaths } from '../../routes/routes'
 import { useHistory } from 'react-router-dom';
 
-const TrainingsWrapper = styled.ul`
-  list-style-type: none;
-  padding: 10px 0;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  align-items: center;
-  max-height: 78vh;
-  overflow-y: scroll;
 
-`
 export default function Trainings() {
   const history = useHistory();
   return (

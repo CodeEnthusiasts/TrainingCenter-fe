@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { theme } from '../../../theme/mainTheme';
+import { theme } from '../../../theme/MainTheme';
 
 const ActiveColor1 = theme.colors.button.secondary.color1;
 const ActiveColor2 = theme.colors.button.secondary.color2;

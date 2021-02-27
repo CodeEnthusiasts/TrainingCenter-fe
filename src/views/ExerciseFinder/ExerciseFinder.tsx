@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
-import SearchBox from '../../components/atoms/SearchBox';
-import MainTemplate from '../../templates/MainTemplate'
-import ExerciseCard from '../../components/molecules/ExerciseCard';
+import SearchBox from '../../components/atoms/SearchBox/SearchBox';
+import MainTemplate from '../../templates/MainTemplate/MainTemplate'
+import ExerciseCard from '../../components/molecules/ExerciseCard/ExerciseCard';
 import { Data } from '../../ExampleData'
-import { RoutePaths } from '../../routes'
+import { RoutePaths } from '../../routes/routes'
 import { useHistory } from 'react-router-dom';
-import { ExercisesContainer, FinderContainer } from '../styles/ExerciseFinderStyle'
-import FiltersModal from '../../components/organisms/FiltersModal';
-import { IExercise } from '../../components/molecules/Exercise';
+import { ExercisesContainer, FinderContainer } from './ExerciseFinderStyle'
+import FiltersModal from '../../components/organisms/FiltersModal/FiltersModal';
+import { IExercise } from '../../components/molecules/Exercise/Exercise';
 
 
 const ExerciseFinder = () => {

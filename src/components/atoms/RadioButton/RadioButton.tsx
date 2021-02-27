@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { Label, LabelDetails, RadioInput, RadioWrapper, StyledRadioButton } from './style'
+import { Label, LabelDetails, RadioInput, RadioWrapper, StyledRadioButton } from './RadioButtonStyle'
 
 interface IRadioButton {
   id: string,

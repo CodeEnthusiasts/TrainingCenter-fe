@@ -1,12 +1,12 @@
 import React from 'react';
-import EditAccountButton from '../../components/molecules/EditAccountButton';
-import H2 from '../../components/atoms/H2';
-import ChangePhotoButton from '../../components/molecules/ChangePhotoButton';
+import EditAccountButton from '../../components/molecules/EditAccountButton/EditAccountButton';
+import H2 from '../../components/atoms/H2/H2';
+import ChangePhotoButton from '../../components/molecules/ChangePhotoButton/ChangePhotoButton';
 import { Data } from '../../ExampleData';
-import { theme } from '../../theme/mainTheme';
+import { theme } from '../../theme/MainTheme';
 import styled from 'styled-components';
-import HeaderNavigation from '../../components/organisms/HeaderNavigation';
-import { RoutePaths } from '../../routes';
+import HeaderNavigation from '../../components/organisms/HeaderNavigation/HeaderNavigation';
+import { RoutePaths } from '../../routes/routes';
 
 const EditAccountWrapper = styled.div`
   width: 375px;

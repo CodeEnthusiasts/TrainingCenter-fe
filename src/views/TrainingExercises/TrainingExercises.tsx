@@ -1,13 +1,13 @@
 import React from 'react'
-import P from '../../components/atoms/P'
-import H1 from '../../components/atoms/H1'
-import Exercise from '../../components/molecules/Exercise'
-import MainTemplate from '../../templates/MainTemplate'
-import TrainingDetailsTemplate from '../../templates/TrainingDetailsTemplate'
+import Paragraph from '../../components/atoms/Paragraph/Paragraph'
+import H1 from '../../components/atoms/H1/H1'
+import Exercise from '../../components/molecules/Exercise/Exercise'
+import MainTemplate from '../../templates/MainTemplate/MainTemplate'
+import TrainingDetailsTemplate from '../../templates/TrainingDetailsTemplate/TrainingDetailsTemplate'
 import { Data } from '../../ExampleData';
-import { RoutePaths } from '../../routes'
+import { RoutePaths } from '../../routes/routes'
 import { useHistory, useParams } from 'react-router-dom';
-import { ExercisesContainer, ExercisesHeader } from '../styles/TrainingExercisesStyle';
+import { ExercisesContainer, ExercisesHeader } from './TrainingExercisesStyle';
 
 const TrainingExercises = () => {
   const { trainingId } = useParams<{ trainingId: string }>();
@@ -30,7 +30,7 @@ const TrainingExercises = () => {
       <TrainingDetailsTemplate trainingId={ trainingId }>
         <ExercisesHeader>
           <H1>Exercises</H1>
-          <P>You got { getTrainingExercises().length } exercises</P>
+          <Paragraph>You got { getTrainingExercises().length } exercises</Paragraph>
         </ExercisesHeader>
         <ExercisesContainer>
           { getTrainingExercises().map(e => {

@@ -1,6 +1,6 @@
 import React, { FC, ReactNode } from 'react';
-import { Link } from './styles';
-import { RoutePaths } from '../../../routes';
+import { Link } from './NavigationButtonStyle';
+import { RoutePaths } from '../../../routes/routes';
 
 interface INavigationButton {
   children: ReactNode,

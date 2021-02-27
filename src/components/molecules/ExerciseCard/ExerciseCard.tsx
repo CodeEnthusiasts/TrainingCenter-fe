@@ -5,10 +5,10 @@ import Icon from '../../atoms/Icon/Icon'
 import Button from '../../atoms/Button/Button';
 import InfoButton from '../../atoms/InfoButton/InfoButton'
 import DifficultyScale from '../DifficultyScale/DifficultyScale';
-import { theme } from '../../../theme/mainTheme'
+import { theme } from '../../../theme/MainTheme'
 import { Separator } from '../../atoms/Separator/Separator'
 import { ExerciseImage } from '../../atoms/ExerciseImage/ExerciseImage'
-import { CardSection, CardSide, ExerciseCardWrapper, ExerciseContnet, ExerciseDetailsContainer, ExercisePreview } from './style'
+import { CardSection, CardSide, ExerciseCardWrapper, ExerciseContnet, ExerciseDetailsContainer, ExercisePreview } from './ExerciseCardStyle'
 import { IMuscle } from '../Exercise/Exercise';
 
 interface IExerciseCard {

@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Detail, Input, Tr } from './styles';
+import { Detail, Input, Tr } from './WorkoutTableRowStyle';
 
 interface IWorkoutTableRow {
   sets: number,

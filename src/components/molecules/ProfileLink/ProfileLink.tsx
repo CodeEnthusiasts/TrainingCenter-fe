@@ -1,10 +1,10 @@
 import React, { FC } from 'react';
-import Button from '../UniversalAccountButton';
-import { Link, Span } from './styles';
-import { theme } from '../../../theme/mainTheme';
+import Button from '../UniversalAccountButton/UniversalAccountButton';
+import { Link, Span } from './ProfileLinkStyle';
+import { theme } from '../../../theme/MainTheme';
 import Paragraph from '../../atoms/Paragraph/Paragraph';
 import Icon from '../../atoms/Icon/Icon';
-import { RoutePaths } from '../../../routes';
+import { RoutePaths } from '../../../routes/routes';
 
 interface IProfileLink {
   path: RoutePaths,

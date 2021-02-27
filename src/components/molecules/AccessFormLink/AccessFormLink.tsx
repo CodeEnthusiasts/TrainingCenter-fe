@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import Link from '../../atoms/Link/Link';
-import { RoutePaths } from '../../../routes';
+import { RoutePaths } from '../../../routes/routes';
 
 interface IAccessFormLink {
   to: RoutePaths,

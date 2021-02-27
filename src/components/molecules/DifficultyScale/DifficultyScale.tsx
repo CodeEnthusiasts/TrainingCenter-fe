@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { LevelCircle, ScaleWrapper } from './style'
+import { LevelCircle, ScaleWrapper } from './DifficultyScaleStyle'
 
 interface IDifficultyScale {
   level: string;
