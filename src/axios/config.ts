@@ -5,18 +5,18 @@ const apiClient = axios.create({
 })
 
 apiClient.interceptors.request.use((config) => {
-  return ({
-    ...config,
-    headers: {
-      "Authorization": "Bearer " + process.env.REACT_APP_API_KEY,
-    }
-  })
-},
+    return ({
+      ...config,
+      headers: {
+        "Authorization": "Bearer " + process.env.REACT_APP_API_KEY,
+      }
+    })
+  },
   error => Promise.reject(error),
 );
 
 apiClient.interceptors.response.use((response) =>
-  response,
+    response,
   async (error) => {
     return Promise.reject(error.response.data);
   },
